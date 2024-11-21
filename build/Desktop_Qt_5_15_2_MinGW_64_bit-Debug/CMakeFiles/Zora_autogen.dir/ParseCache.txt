@@ -4,6 +4,7 @@ D:/Qt/Qtproject/Zora/zora.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/QDataStream
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/QFile
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/QPoint
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/QRandomGenerator
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/QTimer
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/QtGlobal
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qalgorithms.h
@@ -47,6 +48,7 @@ D:/Qt/Qtproject/Zora/zora.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qpair.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qpoint.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qprocessordetection.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qrandom.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qrect.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qrefcount.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qregexp.h
@@ -234,6 +236,7 @@ D:/Qt/Qtproject/Zora/zora.h
  mdp:D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/numeric
  mdp:D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/optional
  mdp:D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ostream
+ mdp:D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/random
  mdp:D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/stdexcept
  mdp:D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/stdlib.h
  mdp:D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/streambuf

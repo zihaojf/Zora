@@ -2,6 +2,7 @@ Zora_autogen/timestamp: \
 	D:/Qt/5.15.2/mingw81_64/include/QtCore/QDataStream \
 	D:/Qt/5.15.2/mingw81_64/include/QtCore/QFile \
 	D:/Qt/5.15.2/mingw81_64/include/QtCore/QPoint \
+	D:/Qt/5.15.2/mingw81_64/include/QtCore/QRandomGenerator \
 	D:/Qt/5.15.2/mingw81_64/include/QtCore/QTimer \
 	D:/Qt/5.15.2/mingw81_64/include/QtCore/QtGlobal \
 	D:/Qt/5.15.2/mingw81_64/include/QtCore/qalgorithms.h \
@@ -45,6 +46,7 @@ Zora_autogen/timestamp: \
 	D:/Qt/5.15.2/mingw81_64/include/QtCore/qpair.h \
 	D:/Qt/5.15.2/mingw81_64/include/QtCore/qpoint.h \
 	D:/Qt/5.15.2/mingw81_64/include/QtCore/qprocessordetection.h \
+	D:/Qt/5.15.2/mingw81_64/include/QtCore/qrandom.h \
 	D:/Qt/5.15.2/mingw81_64/include/QtCore/qrect.h \
 	D:/Qt/5.15.2/mingw81_64/include/QtCore/qrefcount.h \
 	D:/Qt/5.15.2/mingw81_64/include/QtCore/qregexp.h \
@@ -295,6 +297,7 @@ Zora_autogen/timestamp: \
 	D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/numeric \
 	D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/optional \
 	D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ostream \
+	D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/random \
 	D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/stdexcept \
 	D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/stdlib.h \
 	D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/streambuf \
