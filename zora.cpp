@@ -1,5 +1,6 @@
 #include "zora.h"
 #include "./ui_zora.h"
+#include <complex>
 
 Zora::Zora(QWidget *parent)
     : QMainWindow(parent)
@@ -24,9 +25,11 @@ Zora::Zora(QWidget *parent)
     timer->start(40);
     connect(timer,&QTimer::timeout,this,&Zora::standMovement);
 
-    standMovementLoad();
+    ImageLoad();
     standImage = new QLabel(this);
-
+    jumpImage = new QLabel(this);
+    tumbleImage = new QLabel(this);
+    lieImage = new QLabel(this);
 
 
 }
@@ -36,17 +39,32 @@ Zora::~Zora()
     delete ui;
 }
 
-void Zora:: standMovementLoad(){
+void Zora:: ImageLoad(){
     for(int i = 1;i<=33;i++){
-        standmap.push_back(QPixmap(QString(":/image/movement/stand/(%1).jpg").arg(i)));
+        standMap.push_back(QPixmap(QString(":/image/movement/stand/%1.png").arg(i)));
     }
+
+    for(int i = 1;i<=55;i++){
+        jumpMap.push_back(QPixmap(QString(":/image/movement/jump/%1.png").arg(i)));
+    }
+
+    for(int i = 1;i<=56;i++){
+        tumbleMap.push_back(QPixmap(QString(":/image/movement/tumble/%1.png").arg(i)));
+    }
+
+    for(int i = 1;i<=56;i++){
+        lieMap.push_back(QPixmap(QString(":/image/movement/lie/%1.png").arg(i)));
+    }
+
+
+
 }
 
 void Zora::standMovement(){
     static int flag = 0;
     standImage->resize(body_size,body_size);
     if(flag<=32)
-        standImage->setPixmap(standmap[flag].scaled(body_size,body_size));
+        standImage->setPixmap(standMap[flag].scaled(body_size,body_size));
     flag++;
     if(flag>32) flag = 0;
 }

@@ -28,17 +28,21 @@ class Zora : public QMainWindow
 private:
     int body_size;//主形象的大小
     QTimer *timer;//记时
-    vector<QPixmap> standmap;
+    vector<QPixmap> standMap;//站立图片容器
+    vector<QPixmap> jumpMap;
+    vector<QPixmap> lieMap;
+    vector<QPixmap> tumbleMap;
+    //QLabel标签指针
     QLabel *standImage;
+    QLabel *jumpImage;
+    QLabel *lieImage;
+    QLabel *tumbleImage;
 
 public:
     Zora(QWidget *parent = nullptr);
     ~Zora();
 
-    void standMovementLoad();//站立图片载入
-    void jumpMovementLoad();//跳跃图片载入
-    void lieMovementLoad();//趴下图片载入
-    void tumbleMovementLoad();//翻滚图片载入
+    void ImageLoad();//四种状态图片加载
 
     void standMovement();//站立动作
     void jumpMovement();//跳跃动作
