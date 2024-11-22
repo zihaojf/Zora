@@ -1,0 +1,4 @@
+D:/Qt/Qtproject/Zora/build/CMakeFiles/Zora.dir
+D:/Qt/Qtproject/Zora/build/CMakeFiles/INSTALL.dir
+D:/Qt/Qtproject/Zora/build/CMakeFiles/ALL_BUILD.dir
+D:/Qt/Qtproject/Zora/build/CMakeFiles/ZERO_CHECK.dir

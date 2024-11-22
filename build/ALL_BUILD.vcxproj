@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0CDB1FA0-820E-37E4-8833-001ED2F859C4}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Qt\Qtproject\Zora\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Qt/Qtproject/Zora/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -SD:/Qt/Qtproject/Zora -BD:/Qt/Qtproject/Zora/build --check-stamp-file D:/Qt/Qtproject/Zora/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5\Qt5Config.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5\Qt5ConfigVersion.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5\Qt5ModuleLocation.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QVirtualKeyboardPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;D:\Qt\Qtproject\Zora\build\CMakeFiles\3.28.3-msvc11\CMakeCXXCompiler.cmake;D:\Qt\Qtproject\Zora\build\CMakeFiles\3.28.3-msvc11\CMakeRCCompiler.cmake;D:\Qt\Qtproject\Zora\build\CMakeFiles\3.28.3-msvc11\CMakeSystem.cmake;D:\Qt\Qtproject\Zora\image.qrc;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeCXXInformation.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeCommonLanguageInclude.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeGenericSystem.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeInitializeConfigs.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeLanguageInformation.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeParseArguments.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeRCInformation.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInformation.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInitialize.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Compiler\MSVC-CXX.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Compiler\MSVC.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\Windows-Initialize.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-CXX.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\Windows.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Qt\Qtproject\Zora\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Qt/Qtproject/Zora/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -SD:/Qt/Qtproject/Zora -BD:/Qt/Qtproject/Zora/build --check-stamp-file D:/Qt/Qtproject/Zora/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5\Qt5Config.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5\Qt5ConfigVersion.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5\Qt5ModuleLocation.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QVirtualKeyboardPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;D:\Qt\Qtproject\Zora\build\CMakeFiles\3.28.3-msvc11\CMakeCXXCompiler.cmake;D:\Qt\Qtproject\Zora\build\CMakeFiles\3.28.3-msvc11\CMakeRCCompiler.cmake;D:\Qt\Qtproject\Zora\build\CMakeFiles\3.28.3-msvc11\CMakeSystem.cmake;D:\Qt\Qtproject\Zora\image.qrc;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeCXXInformation.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeCommonLanguageInclude.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeGenericSystem.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeInitializeConfigs.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeLanguageInformation.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeParseArguments.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeRCInformation.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInformation.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInitialize.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Compiler\MSVC-CXX.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Compiler\MSVC.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\Windows-Initialize.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-CXX.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\Windows.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Qt\Qtproject\Zora\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/Qt/Qtproject/Zora/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -SD:/Qt/Qtproject/Zora -BD:/Qt/Qtproject/Zora/build --check-stamp-file D:/Qt/Qtproject/Zora/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5\Qt5Config.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5\Qt5ConfigVersion.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5\Qt5ModuleLocation.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QVirtualKeyboardPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;D:\Qt\Qtproject\Zora\build\CMakeFiles\3.28.3-msvc11\CMakeCXXCompiler.cmake;D:\Qt\Qtproject\Zora\build\CMakeFiles\3.28.3-msvc11\CMakeRCCompiler.cmake;D:\Qt\Qtproject\Zora\build\CMakeFiles\3.28.3-msvc11\CMakeSystem.cmake;D:\Qt\Qtproject\Zora\image.qrc;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeCXXInformation.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeCommonLanguageInclude.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeGenericSystem.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeInitializeConfigs.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeLanguageInformation.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeParseArguments.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeRCInformation.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInformation.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInitialize.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Compiler\MSVC-CXX.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Compiler\MSVC.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\Windows-Initialize.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-CXX.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\Windows.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Qt\Qtproject\Zora\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/Qt/Qtproject/Zora/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -SD:/Qt/Qtproject/Zora -BD:/Qt/Qtproject/Zora/build --check-stamp-file D:/Qt/Qtproject/Zora/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5\Qt5Config.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5\Qt5ConfigVersion.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5\Qt5ModuleLocation.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QVirtualKeyboardPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;D:\Qt\Qtproject\Zora\build\CMakeFiles\3.28.3-msvc11\CMakeCXXCompiler.cmake;D:\Qt\Qtproject\Zora\build\CMakeFiles\3.28.3-msvc11\CMakeRCCompiler.cmake;D:\Qt\Qtproject\Zora\build\CMakeFiles\3.28.3-msvc11\CMakeSystem.cmake;D:\Qt\Qtproject\Zora\image.qrc;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeCXXInformation.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeCommonLanguageInclude.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeGenericSystem.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeInitializeConfigs.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeLanguageInformation.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeParseArguments.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeRCInformation.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInformation.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInitialize.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Compiler\MSVC-CXX.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Compiler\MSVC.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\Windows-Initialize.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-CXX.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\Windows.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Qt\Qtproject\Zora\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\Qt\Qtproject\Zora\build\ZERO_CHECK.vcxproj">
+      <Project>{6875FFB1-6F16-3ECA-B318-70602FC97B79}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\Qt\Qtproject\Zora\build\Zora.vcxproj">
+      <Project>{8D4D008F-6E3C-3D6C-8D66-94E0546C3F12}</Project>
+      <Name>Zora</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

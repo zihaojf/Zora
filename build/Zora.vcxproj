@@ -1,0 +1,626 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8D4D008F-6E3C-3D6C-8D66-94E0546C3F12}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>Zora</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Qt\Qtproject\Zora\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Zora.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Zora</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Qt\Qtproject\Zora\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Zora.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Zora</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Qt\Qtproject\Zora\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Zora.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Zora</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Qt\Qtproject\Zora\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Zora.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Zora</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Qt\Qtproject\Zora\build\Zora_autogen\include_Debug;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/ProgramData/Anaconda3/Library/include/qt" /external:I "D:/ProgramData/Anaconda3/Library/include/qt/QtWidgets" /external:I "D:/ProgramData/Anaconda3/Library/include/qt/QtGui" /external:I "D:/ProgramData/Anaconda3/Library/include/qt/QtANGLE" /external:I "D:/ProgramData/Anaconda3/Library/include/qt/QtCore" /external:I "D:/ProgramData/Anaconda3/Library/./mkspecs/win32-msvc"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Qt\Qtproject\Zora\build\Zora_autogen\include_Debug;D:\ProgramData\Anaconda3\Library\include\qt;D:\ProgramData\Anaconda3\Library\include\qt\QtWidgets;D:\ProgramData\Anaconda3\Library\include\qt\QtGui;D:\ProgramData\Anaconda3\Library\include\qt\QtANGLE;D:\ProgramData\Anaconda3\Library\include\qt\QtCore;D:\ProgramData\Anaconda3\Library\.\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Qt\Qtproject\Zora\build\Zora_autogen\include_Debug;D:\ProgramData\Anaconda3\Library\include\qt;D:\ProgramData\Anaconda3\Library\include\qt\QtWidgets;D:\ProgramData\Anaconda3\Library\include\qt\QtGui;D:\ProgramData\Anaconda3\Library\include\qt\QtANGLE;D:\ProgramData\Anaconda3\Library\include\qt\QtCore;D:\ProgramData\Anaconda3\Library\.\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message>Automatic MOC and UIC for target Zora</Message>
+      <Command>setlocal
+cd D:\Qt\Qtproject\Zora\build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E cmake_autogen D:/Qt/Qtproject/Zora/build/CMakeFiles/Zora_autogen.dir/AutogenInfo.json Debug
+if %errorlevel% neq 0 goto :cmEnd
+D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E touch D:/Qt/Qtproject/Zora/build/Zora_autogen/autouic_Debug.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <Link>
+      <AdditionalDependencies>D:\ProgramData\Anaconda3\Library\lib\Qt5Widgets.lib;D:\ProgramData\Anaconda3\Library\lib\Qt5Gui.lib;D:\ProgramData\Anaconda3\Library\lib\Qt5Core.lib;D:\ProgramData\Anaconda3\Library\lib\qtmain.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Qt/Qtproject/Zora/build/Debug/Zora.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Qt/Qtproject/Zora/build/Debug/Zora.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Qt\Qtproject\Zora\build\Zora_autogen\include_Release;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/ProgramData/Anaconda3/Library/include/qt" /external:I "D:/ProgramData/Anaconda3/Library/include/qt/QtWidgets" /external:I "D:/ProgramData/Anaconda3/Library/include/qt/QtGui" /external:I "D:/ProgramData/Anaconda3/Library/include/qt/QtANGLE" /external:I "D:/ProgramData/Anaconda3/Library/include/qt/QtCore" /external:I "D:/ProgramData/Anaconda3/Library/./mkspecs/win32-msvc"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Qt\Qtproject\Zora\build\Zora_autogen\include_Release;D:\ProgramData\Anaconda3\Library\include\qt;D:\ProgramData\Anaconda3\Library\include\qt\QtWidgets;D:\ProgramData\Anaconda3\Library\include\qt\QtGui;D:\ProgramData\Anaconda3\Library\include\qt\QtANGLE;D:\ProgramData\Anaconda3\Library\include\qt\QtCore;D:\ProgramData\Anaconda3\Library\.\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Qt\Qtproject\Zora\build\Zora_autogen\include_Release;D:\ProgramData\Anaconda3\Library\include\qt;D:\ProgramData\Anaconda3\Library\include\qt\QtWidgets;D:\ProgramData\Anaconda3\Library\include\qt\QtGui;D:\ProgramData\Anaconda3\Library\include\qt\QtANGLE;D:\ProgramData\Anaconda3\Library\include\qt\QtCore;D:\ProgramData\Anaconda3\Library\.\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message>Automatic MOC and UIC for target Zora</Message>
+      <Command>setlocal
+cd D:\Qt\Qtproject\Zora\build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E cmake_autogen D:/Qt/Qtproject/Zora/build/CMakeFiles/Zora_autogen.dir/AutogenInfo.json Release
+if %errorlevel% neq 0 goto :cmEnd
+D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E touch D:/Qt/Qtproject/Zora/build/Zora_autogen/autouic_Release.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <Link>
+      <AdditionalDependencies>D:\ProgramData\Anaconda3\Library\lib\Qt5Widgets.lib;D:\ProgramData\Anaconda3\Library\lib\Qt5Gui.lib;D:\ProgramData\Anaconda3\Library\lib\Qt5Core.lib;D:\ProgramData\Anaconda3\Library\lib\qtmain.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Qt/Qtproject/Zora/build/Release/Zora.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Qt/Qtproject/Zora/build/Release/Zora.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Qt\Qtproject\Zora\build\Zora_autogen\include_MinSizeRel;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/ProgramData/Anaconda3/Library/include/qt" /external:I "D:/ProgramData/Anaconda3/Library/include/qt/QtWidgets" /external:I "D:/ProgramData/Anaconda3/Library/include/qt/QtGui" /external:I "D:/ProgramData/Anaconda3/Library/include/qt/QtANGLE" /external:I "D:/ProgramData/Anaconda3/Library/include/qt/QtCore" /external:I "D:/ProgramData/Anaconda3/Library/./mkspecs/win32-msvc"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Qt\Qtproject\Zora\build\Zora_autogen\include_MinSizeRel;D:\ProgramData\Anaconda3\Library\include\qt;D:\ProgramData\Anaconda3\Library\include\qt\QtWidgets;D:\ProgramData\Anaconda3\Library\include\qt\QtGui;D:\ProgramData\Anaconda3\Library\include\qt\QtANGLE;D:\ProgramData\Anaconda3\Library\include\qt\QtCore;D:\ProgramData\Anaconda3\Library\.\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Qt\Qtproject\Zora\build\Zora_autogen\include_MinSizeRel;D:\ProgramData\Anaconda3\Library\include\qt;D:\ProgramData\Anaconda3\Library\include\qt\QtWidgets;D:\ProgramData\Anaconda3\Library\include\qt\QtGui;D:\ProgramData\Anaconda3\Library\include\qt\QtANGLE;D:\ProgramData\Anaconda3\Library\include\qt\QtCore;D:\ProgramData\Anaconda3\Library\.\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message>Automatic MOC and UIC for target Zora</Message>
+      <Command>setlocal
+cd D:\Qt\Qtproject\Zora\build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E cmake_autogen D:/Qt/Qtproject/Zora/build/CMakeFiles/Zora_autogen.dir/AutogenInfo.json MinSizeRel
+if %errorlevel% neq 0 goto :cmEnd
+D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E touch D:/Qt/Qtproject/Zora/build/Zora_autogen/autouic_MinSizeRel.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <Link>
+      <AdditionalDependencies>D:\ProgramData\Anaconda3\Library\lib\Qt5Widgets.lib;D:\ProgramData\Anaconda3\Library\lib\Qt5Gui.lib;D:\ProgramData\Anaconda3\Library\lib\Qt5Core.lib;D:\ProgramData\Anaconda3\Library\lib\qtmain.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Qt/Qtproject/Zora/build/MinSizeRel/Zora.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Qt/Qtproject/Zora/build/MinSizeRel/Zora.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Qt\Qtproject\Zora\build\Zora_autogen\include_RelWithDebInfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/ProgramData/Anaconda3/Library/include/qt" /external:I "D:/ProgramData/Anaconda3/Library/include/qt/QtWidgets" /external:I "D:/ProgramData/Anaconda3/Library/include/qt/QtGui" /external:I "D:/ProgramData/Anaconda3/Library/include/qt/QtANGLE" /external:I "D:/ProgramData/Anaconda3/Library/include/qt/QtCore" /external:I "D:/ProgramData/Anaconda3/Library/./mkspecs/win32-msvc"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Qt\Qtproject\Zora\build\Zora_autogen\include_RelWithDebInfo;D:\ProgramData\Anaconda3\Library\include\qt;D:\ProgramData\Anaconda3\Library\include\qt\QtWidgets;D:\ProgramData\Anaconda3\Library\include\qt\QtGui;D:\ProgramData\Anaconda3\Library\include\qt\QtANGLE;D:\ProgramData\Anaconda3\Library\include\qt\QtCore;D:\ProgramData\Anaconda3\Library\.\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Qt\Qtproject\Zora\build\Zora_autogen\include_RelWithDebInfo;D:\ProgramData\Anaconda3\Library\include\qt;D:\ProgramData\Anaconda3\Library\include\qt\QtWidgets;D:\ProgramData\Anaconda3\Library\include\qt\QtGui;D:\ProgramData\Anaconda3\Library\include\qt\QtANGLE;D:\ProgramData\Anaconda3\Library\include\qt\QtCore;D:\ProgramData\Anaconda3\Library\.\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message>Automatic MOC and UIC for target Zora</Message>
+      <Command>setlocal
+cd D:\Qt\Qtproject\Zora\build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E cmake_autogen D:/Qt/Qtproject/Zora/build/CMakeFiles/Zora_autogen.dir/AutogenInfo.json RelWithDebInfo
+if %errorlevel% neq 0 goto :cmEnd
+D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E touch D:/Qt/Qtproject/Zora/build/Zora_autogen/autouic_RelWithDebInfo.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <Link>
+      <AdditionalDependencies>D:\ProgramData\Anaconda3\Library\lib\Qt5Widgets.lib;D:\ProgramData\Anaconda3\Library\lib\Qt5Gui.lib;D:\ProgramData\Anaconda3\Library\lib\Qt5Core.lib;D:\ProgramData\Anaconda3\Library\lib\qtmain.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Qt/Qtproject/Zora/build/RelWithDebInfo/Zora.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Qt/Qtproject/Zora/build/RelWithDebInfo/Zora.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Qt\Qtproject\Zora\build\CMakeFiles\2e94f77d558b18dba550cfe9aca43e81\autouic_(CONFIG).stamp.rule">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd D:\Qt\Qtproject\Zora\build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Qt\Qtproject\Zora\zora.ui;D:\ProgramData\Anaconda3\Library\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Qt\Qtproject\Zora\build\Zora_autogen\autouic_Debug.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd D:\Qt\Qtproject\Zora\build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Qt\Qtproject\Zora\zora.ui;D:\ProgramData\Anaconda3\Library\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Qt\Qtproject\Zora\build\Zora_autogen\autouic_Release.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd D:\Qt\Qtproject\Zora\build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Qt\Qtproject\Zora\zora.ui;D:\ProgramData\Anaconda3\Library\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Qt\Qtproject\Zora\build\Zora_autogen\autouic_MinSizeRel.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd D:\Qt\Qtproject\Zora\build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Qt\Qtproject\Zora\zora.ui;D:\ProgramData\Anaconda3\Library\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Qt\Qtproject\Zora\build\Zora_autogen\autouic_RelWithDebInfo.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Qt\Qtproject\Zora\build\CMakeFiles\e09b6f4494841c61fbe951f313f5ea20\qrc_image.cpp.rule">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Automatic RCC for image.qrc</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd D:\Qt\Qtproject\Zora\build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E cmake_autorcc D:/Qt/Qtproject/Zora/build/CMakeFiles/Zora_autogen.dir/AutoRcc_image_EWIEGA46WW_Info.json Debug
+if %errorlevel% neq 0 goto :cmEnd
+D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E cmake_autorcc D:/Qt/Qtproject/Zora/build/CMakeFiles/Zora_autogen.dir/AutoRcc_image_EWIEGA46WW_Info.json Release
+if %errorlevel% neq 0 goto :cmEnd
+D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E cmake_autorcc D:/Qt/Qtproject/Zora/build/CMakeFiles/Zora_autogen.dir/AutoRcc_image_EWIEGA46WW_Info.json MinSizeRel
+if %errorlevel% neq 0 goto :cmEnd
+D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E cmake_autorcc D:/Qt/Qtproject/Zora/build/CMakeFiles/Zora_autogen.dir/AutoRcc_image_EWIEGA46WW_Info.json RelWithDebInfo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Qt\Qtproject\Zora\image.qrc;D:\Qt\Qtproject\Zora\build\CMakeFiles\Zora_autogen.dir\AutoRcc_image_EWIEGA46WW_Info.json;D:\Qt\Qtproject\Zora\image\movement\jump\32.png;D:\Qt\Qtproject\Zora\image\movement\jump\24.png;D:\Qt\Qtproject\Zora\image\movement\jump\49.png;D:\Qt\Qtproject\Zora\image\movement\jump\16.png;D:\Qt\Qtproject\Zora\image\movement\jump\3.png;D:\Qt\Qtproject\Zora\image\movement\jump\31.png;D:\Qt\Qtproject\Zora\image\movement\jump\23.png;D:\Qt\Qtproject\Zora\image\movement\jump\48.png;D:\Qt\Qtproject\Zora\image\movement\jump\15.png;D:\Qt\Qtproject\Zora\image\movement\jump\2.png;D:\Qt\Qtproject\Zora\image\movement\jump\30.png;D:\Qt\Qtproject\Zora\image\movement\jump\55.png;D:\Qt\Qtproject\Zora\image\movement\jump\22.png;D:\Qt\Qtproject\Zora\image\movement\jump\47.png;D:\Qt\Qtproject\Zora\image\movement\jump\14.png;D:\Qt\Qtproject\Zora\image\movement\jump\39.png;D:\Qt\Qtproject\Zora\image\movement\jump\1.png;D:\Qt\Qtproject\Zora\image\movement\jump\54.png;D:\Qt\Qtproject\Zora\image\movement\jump\21.png;D:\Qt\Qtproject\Zora\image\movement\jump\46.png;D:\Qt\Qtproject\Zora\image\movement\jump\13.png;D:\Qt\Qtproject\Zora\image\movement\jump\38.png;D:\Qt\Qtproject\Zora\image\movement\jump\53.png;D:\Qt\Qtproject\Zora\image\movement\jump\20.png;D:\Qt\Qtproject\Zora\image\movement\jump\9.png;D:\Qt\Qtproject\Zora\image\movement\jump\45.png;D:\Qt\Qtproject\Zora\image\movement\jump\37.png;D:\Qt\Qtproject\Zora\image\movement\jump\12.png;D:\Qt\Qtproject\Zora\image\movement\jump\29.png;D:\Qt\Qtproject\Zora\image\movement\jump\52.png;D:\Qt\Qtproject\Zora\image\movement\jump\8.png;D:\Qt\Qtproject\Zora\image\movement\jump\44.png;D:\Qt\Qtproject\Zora\image\movement\jump\36.png;D:\Qt\Qtproject\Zora\image\movement\jump\11.png;D:\Qt\Qtproject\Zora\image\movement\jump\28.png;D:\Qt\Qtproject\Zora\image\movement\jump\51.png;D:\Qt\Qtproject\Zora\image\movement\jump\7.png;D:\Qt\Qtproject\Zora\image\movement\jump\43.png;D:\Qt\Qtproject\Zora\image\movement\jump\35.png;D:\Qt\Qtproject\Zora\image\movement\jump\10.png;D:\Qt\Qtproject\Zora\image\movement\jump\27.png;D:\Qt\Qtproject\Zora\image\movement\jump\50.png;D:\Qt\Qtproject\Zora\image\movement\jump\19.png;D:\Qt\Qtproject\Zora\image\movement\jump\6.png;D:\Qt\Qtproject\Zora\image\movement\jump\42.png;D:\Qt\Qtproject\Zora\image\movement\jump\34.png;D:\Qt\Qtproject\Zora\image\movement\jump\26.png;D:\Qt\Qtproject\Zora\image\movement\jump\18.png;D:\Qt\Qtproject\Zora\image\movement\jump\5.png;D:\Qt\Qtproject\Zora\image\movement\jump\41.png;D:\Qt\Qtproject\Zora\image\movement\jump\33.png;D:\Qt\Qtproject\Zora\image\movement\jump\25.png;D:\Qt\Qtproject\Zora\image\movement\jump\17.png;D:\Qt\Qtproject\Zora\image\movement\jump\4.png;D:\Qt\Qtproject\Zora\image\movement\jump\40.png;D:\Qt\Qtproject\Zora\image\movement\lie\32.png;D:\Qt\Qtproject\Zora\image\movement\lie\24.png;D:\Qt\Qtproject\Zora\image\movement\lie\49.png;D:\Qt\Qtproject\Zora\image\movement\lie\16.png;D:\Qt\Qtproject\Zora\image\movement\lie\3.png;D:\Qt\Qtproject\Zora\image\movement\lie\31.png;D:\Qt\Qtproject\Zora\image\movement\lie\56.png;D:\Qt\Qtproject\Zora\image\movement\lie\23.png;D:\Qt\Qtproject\Zora\image\movement\lie\48.png;D:\Qt\Qtproject\Zora\image\movement\lie\15.png;D:\Qt\Qtproject\Zora\image\movement\lie\2.png;D:\Qt\Qtproject\Zora\image\movement\lie\30.png;D:\Qt\Qtproject\Zora\image\movement\lie\55.png;D:\Qt\Qtproject\Zora\image\movement\lie\22.png;D:\Qt\Qtproject\Zora\image\movement\lie\47.png;D:\Qt\Qtproject\Zora\image\movement\lie\14.png;D:\Qt\Qtproject\Zora\image\movement\lie\39.png;D:\Qt\Qtproject\Zora\image\movement\lie\1.png;D:\Qt\Qtproject\Zora\image\movement\lie\54.png;D:\Qt\Qtproject\Zora\image\movement\lie\21.png;D:\Qt\Qtproject\Zora\image\movement\lie\46.png;D:\Qt\Qtproject\Zora\image\movement\lie\13.png;D:\Qt\Qtproject\Zora\image\movement\lie\38.png;D:\Qt\Qtproject\Zora\image\movement\lie\53.png;D:\Qt\Qtproject\Zora\image\movement\lie\20.png;D:\Qt\Qtproject\Zora\image\movement\lie\9.png;D:\Qt\Qtproject\Zora\image\movement\lie\45.png;D:\Qt\Qtproject\Zora\image\movement\lie\37.png;D:\Qt\Qtproject\Zora\image\movement\lie\12.png;D:\Qt\Qtproject\Zora\image\movement\lie\29.png;D:\Qt\Qtproject\Zora\image\movement\lie\52.png;D:\Qt\Qtproject\Zora\image\movement\lie\8.png;D:\Qt\Qtproject\Zora\image\movement\lie\44.png;D:\Qt\Qtproject\Zora\image\movement\lie\36.png;D:\Qt\Qtproject\Zora\image\movement\lie\11.png;D:\Qt\Qtproject\Zora\image\movement\lie\28.png;D:\Qt\Qtproject\Zora\image\movement\lie\51.png;D:\Qt\Qtproject\Zora\image\movement\lie\7.png;D:\Qt\Qtproject\Zora\image\movement\lie\43.png;D:\Qt\Qtproject\Zora\image\movement\lie\35.png;D:\Qt\Qtproject\Zora\image\movement\lie\10.png;D:\Qt\Qtproject\Zora\image\movement\lie\27.png;D:\Qt\Qtproject\Zora\image\movement\lie\50.png;D:\Qt\Qtproject\Zora\image\movement\lie\19.png;D:\Qt\Qtproject\Zora\image\movement\lie\6.png;D:\Qt\Qtproject\Zora\image\movement\lie\42.png;D:\Qt\Qtproject\Zora\image\movement\lie\34.png;D:\Qt\Qtproject\Zora\image\movement\lie\26.png;D:\Qt\Qtproject\Zora\image\movement\lie\18.png;D:\Qt\Qtproject\Zora\image\movement\lie\5.png;D:\Qt\Qtproject\Zora\image\movement\lie\41.png;D:\Qt\Qtproject\Zora\image\movement\lie\33.png;D:\Qt\Qtproject\Zora\image\movement\lie\25.png;D:\Qt\Qtproject\Zora\image\movement\lie\17.png;D:\Qt\Qtproject\Zora\image\movement\lie\4.png;D:\Qt\Qtproject\Zora\image\movement\lie\40.png;D:\Qt\Qtproject\Zora\image\movement\stand\30.png;D:\Qt\Qtproject\Zora\image\movement\stand\31.png;D:\Qt\Qtproject\Zora\image\movement\stand\32.png;D:\Qt\Qtproject\Zora\image\movement\stand\33.png;D:\Qt\Qtproject\Zora\image\movement\stand\20.png;D:\Qt\Qtproject\Zora\image\movement\stand\21.png;D:\Qt\Qtproject\Zora\image\movement\stand\22.png;D:\Qt\Qtproject\Zora\image\movement\stand\23.png;D:\Qt\Qtproject\Zora\image\movement\stand\24.png;D:\Qt\Qtproject\Zora\image\movement\stand\1.png;D:\Qt\Qtproject\Zora\image\movement\stand\25.png;D:\Qt\Qtproject\Zora\image\movement\stand\2.png;D:\Qt\Qtproject\Zora\image\movement\stand\10.png;D:\Qt\Qtproject\Zora\image\movement\stand\26.png;D:\Qt\Qtproject\Zora\image\movement\stand\3.png;D:\Qt\Qtproject\Zora\image\movement\stand\11.png;D:\Qt\Qtproject\Zora\image\movement\stand\27.png;D:\Qt\Qtproject\Zora\image\movement\stand\4.png;D:\Qt\Qtproject\Zora\image\movement\stand\12.png;D:\Qt\Qtproject\Zora\image\movement\stand\28.png;D:\Qt\Qtproject\Zora\image\movement\stand\5.png;D:\Qt\Qtproject\Zora\image\movement\stand\13.png;D:\Qt\Qtproject\Zora\image\movement\stand\29.png;D:\Qt\Qtproject\Zora\image\movement\stand\6.png;D:\Qt\Qtproject\Zora\image\movement\stand\14.png;D:\Qt\Qtproject\Zora\image\movement\stand\15.png;D:\Qt\Qtproject\Zora\image\movement\stand\7.png;D:\Qt\Qtproject\Zora\image\movement\stand\8.png;D:\Qt\Qtproject\Zora\image\movement\stand\16.png;D:\Qt\Qtproject\Zora\image\movement\stand\9.png;D:\Qt\Qtproject\Zora\image\movement\stand\17.png;D:\Qt\Qtproject\Zora\image\movement\stand\18.png;D:\Qt\Qtproject\Zora\image\movement\stand\19.png;D:\Qt\Qtproject\Zora\image\movement\tumble\32.png;D:\Qt\Qtproject\Zora\image\movement\tumble\24.png;D:\Qt\Qtproject\Zora\image\movement\tumble\49.png;D:\Qt\Qtproject\Zora\image\movement\tumble\16.png;D:\Qt\Qtproject\Zora\image\movement\tumble\3.png;D:\Qt\Qtproject\Zora\image\movement\tumble\31.png;D:\Qt\Qtproject\Zora\image\movement\tumble\56.png;D:\Qt\Qtproject\Zora\image\movement\tumble\23.png;D:\Qt\Qtproject\Zora\image\movement\tumble\48.png;D:\Qt\Qtproject\Zora\image\movement\tumble\15.png;D:\Qt\Qtproject\Zora\image\movement\tumble\2.png;D:\Qt\Qtproject\Zora\image\movement\tumble\30.png;D:\Qt\Qtproject\Zora\image\movement\tumble\55.png;D:\Qt\Qtproject\Zora\image\movement\tumble\22.png;D:\Qt\Qtproject\Zora\image\movement\tumble\47.png;D:\Qt\Qtproject\Zora\image\movement\tumble\14.png;D:\Qt\Qtproject\Zora\image\movement\tumble\39.png;D:\Qt\Qtproject\Zora\image\movement\tumble\1.png;D:\Qt\Qtproject\Zora\image\movement\tumble\54.png;D:\Qt\Qtproject\Zora\image\movement\tumble\21.png;D:\Qt\Qtproject\Zora\image\movement\tumble\46.png;D:\Qt\Qtproject\Zora\image\movement\tumble\13.png;D:\Qt\Qtproject\Zora\image\movement\tumble\38.png;D:\Qt\Qtproject\Zora\image\movement\tumble\53.png;D:\Qt\Qtproject\Zora\image\movement\tumble\20.png;D:\Qt\Qtproject\Zora\image\movement\tumble\9.png;D:\Qt\Qtproject\Zora\image\movement\tumble\45.png;D:\Qt\Qtproject\Zora\image\movement\tumble\37.png;D:\Qt\Qtproject\Zora\image\movement\tumble\12.png;D:\Qt\Qtproject\Zora\image\movement\tumble\29.png;D:\Qt\Qtproject\Zora\image\movement\tumble\52.png;D:\Qt\Qtproject\Zora\image\movement\tumble\8.png;D:\Qt\Qtproject\Zora\image\movement\tumble\44.png;D:\Qt\Qtproject\Zora\image\movement\tumble\36.png;D:\Qt\Qtproject\Zora\image\movement\tumble\11.png;D:\Qt\Qtproject\Zora\image\movement\tumble\28.png;D:\Qt\Qtproject\Zora\image\movement\tumble\51.png;D:\Qt\Qtproject\Zora\image\movement\tumble\7.png;D:\Qt\Qtproject\Zora\image\movement\tumble\43.png;D:\Qt\Qtproject\Zora\image\movement\tumble\35.png;D:\Qt\Qtproject\Zora\image\movement\tumble\10.png;D:\Qt\Qtproject\Zora\image\movement\tumble\27.png;D:\Qt\Qtproject\Zora\image\movement\tumble\50.png;D:\Qt\Qtproject\Zora\image\movement\tumble\19.png;D:\Qt\Qtproject\Zora\image\movement\tumble\6.png;D:\Qt\Qtproject\Zora\image\movement\tumble\42.png;D:\Qt\Qtproject\Zora\image\movement\tumble\34.png;D:\Qt\Qtproject\Zora\image\movement\tumble\26.png;D:\Qt\Qtproject\Zora\image\movement\tumble\18.png;D:\Qt\Qtproject\Zora\image\movement\tumble\5.png;D:\Qt\Qtproject\Zora\image\movement\tumble\41.png;D:\Qt\Qtproject\Zora\image\movement\tumble\33.png;D:\Qt\Qtproject\Zora\image\movement\tumble\25.png;D:\Qt\Qtproject\Zora\image\movement\tumble\17.png;D:\Qt\Qtproject\Zora\image\movement\tumble\4.png;D:\Qt\Qtproject\Zora\image\movement\tumble\40.png;D:\ProgramData\Anaconda3\Library\bin\rcc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Qt\Qtproject\Zora\build\Zora_autogen\EWIEGA46WW\qrc_image.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Automatic RCC for image.qrc</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd D:\Qt\Qtproject\Zora\build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E cmake_autorcc D:/Qt/Qtproject/Zora/build/CMakeFiles/Zora_autogen.dir/AutoRcc_image_EWIEGA46WW_Info.json Debug
+if %errorlevel% neq 0 goto :cmEnd
+D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E cmake_autorcc D:/Qt/Qtproject/Zora/build/CMakeFiles/Zora_autogen.dir/AutoRcc_image_EWIEGA46WW_Info.json Release
+if %errorlevel% neq 0 goto :cmEnd
+D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E cmake_autorcc D:/Qt/Qtproject/Zora/build/CMakeFiles/Zora_autogen.dir/AutoRcc_image_EWIEGA46WW_Info.json MinSizeRel
+if %errorlevel% neq 0 goto :cmEnd
+D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E cmake_autorcc D:/Qt/Qtproject/Zora/build/CMakeFiles/Zora_autogen.dir/AutoRcc_image_EWIEGA46WW_Info.json RelWithDebInfo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Qt\Qtproject\Zora\image.qrc;D:\Qt\Qtproject\Zora\build\CMakeFiles\Zora_autogen.dir\AutoRcc_image_EWIEGA46WW_Info.json;D:\Qt\Qtproject\Zora\image\movement\jump\32.png;D:\Qt\Qtproject\Zora\image\movement\jump\24.png;D:\Qt\Qtproject\Zora\image\movement\jump\49.png;D:\Qt\Qtproject\Zora\image\movement\jump\16.png;D:\Qt\Qtproject\Zora\image\movement\jump\3.png;D:\Qt\Qtproject\Zora\image\movement\jump\31.png;D:\Qt\Qtproject\Zora\image\movement\jump\23.png;D:\Qt\Qtproject\Zora\image\movement\jump\48.png;D:\Qt\Qtproject\Zora\image\movement\jump\15.png;D:\Qt\Qtproject\Zora\image\movement\jump\2.png;D:\Qt\Qtproject\Zora\image\movement\jump\30.png;D:\Qt\Qtproject\Zora\image\movement\jump\55.png;D:\Qt\Qtproject\Zora\image\movement\jump\22.png;D:\Qt\Qtproject\Zora\image\movement\jump\47.png;D:\Qt\Qtproject\Zora\image\movement\jump\14.png;D:\Qt\Qtproject\Zora\image\movement\jump\39.png;D:\Qt\Qtproject\Zora\image\movement\jump\1.png;D:\Qt\Qtproject\Zora\image\movement\jump\54.png;D:\Qt\Qtproject\Zora\image\movement\jump\21.png;D:\Qt\Qtproject\Zora\image\movement\jump\46.png;D:\Qt\Qtproject\Zora\image\movement\jump\13.png;D:\Qt\Qtproject\Zora\image\movement\jump\38.png;D:\Qt\Qtproject\Zora\image\movement\jump\53.png;D:\Qt\Qtproject\Zora\image\movement\jump\20.png;D:\Qt\Qtproject\Zora\image\movement\jump\9.png;D:\Qt\Qtproject\Zora\image\movement\jump\45.png;D:\Qt\Qtproject\Zora\image\movement\jump\37.png;D:\Qt\Qtproject\Zora\image\movement\jump\12.png;D:\Qt\Qtproject\Zora\image\movement\jump\29.png;D:\Qt\Qtproject\Zora\image\movement\jump\52.png;D:\Qt\Qtproject\Zora\image\movement\jump\8.png;D:\Qt\Qtproject\Zora\image\movement\jump\44.png;D:\Qt\Qtproject\Zora\image\movement\jump\36.png;D:\Qt\Qtproject\Zora\image\movement\jump\11.png;D:\Qt\Qtproject\Zora\image\movement\jump\28.png;D:\Qt\Qtproject\Zora\image\movement\jump\51.png;D:\Qt\Qtproject\Zora\image\movement\jump\7.png;D:\Qt\Qtproject\Zora\image\movement\jump\43.png;D:\Qt\Qtproject\Zora\image\movement\jump\35.png;D:\Qt\Qtproject\Zora\image\movement\jump\10.png;D:\Qt\Qtproject\Zora\image\movement\jump\27.png;D:\Qt\Qtproject\Zora\image\movement\jump\50.png;D:\Qt\Qtproject\Zora\image\movement\jump\19.png;D:\Qt\Qtproject\Zora\image\movement\jump\6.png;D:\Qt\Qtproject\Zora\image\movement\jump\42.png;D:\Qt\Qtproject\Zora\image\movement\jump\34.png;D:\Qt\Qtproject\Zora\image\movement\jump\26.png;D:\Qt\Qtproject\Zora\image\movement\jump\18.png;D:\Qt\Qtproject\Zora\image\movement\jump\5.png;D:\Qt\Qtproject\Zora\image\movement\jump\41.png;D:\Qt\Qtproject\Zora\image\movement\jump\33.png;D:\Qt\Qtproject\Zora\image\movement\jump\25.png;D:\Qt\Qtproject\Zora\image\movement\jump\17.png;D:\Qt\Qtproject\Zora\image\movement\jump\4.png;D:\Qt\Qtproject\Zora\image\movement\jump\40.png;D:\Qt\Qtproject\Zora\image\movement\lie\32.png;D:\Qt\Qtproject\Zora\image\movement\lie\24.png;D:\Qt\Qtproject\Zora\image\movement\lie\49.png;D:\Qt\Qtproject\Zora\image\movement\lie\16.png;D:\Qt\Qtproject\Zora\image\movement\lie\3.png;D:\Qt\Qtproject\Zora\image\movement\lie\31.png;D:\Qt\Qtproject\Zora\image\movement\lie\56.png;D:\Qt\Qtproject\Zora\image\movement\lie\23.png;D:\Qt\Qtproject\Zora\image\movement\lie\48.png;D:\Qt\Qtproject\Zora\image\movement\lie\15.png;D:\Qt\Qtproject\Zora\image\movement\lie\2.png;D:\Qt\Qtproject\Zora\image\movement\lie\30.png;D:\Qt\Qtproject\Zora\image\movement\lie\55.png;D:\Qt\Qtproject\Zora\image\movement\lie\22.png;D:\Qt\Qtproject\Zora\image\movement\lie\47.png;D:\Qt\Qtproject\Zora\image\movement\lie\14.png;D:\Qt\Qtproject\Zora\image\movement\lie\39.png;D:\Qt\Qtproject\Zora\image\movement\lie\1.png;D:\Qt\Qtproject\Zora\image\movement\lie\54.png;D:\Qt\Qtproject\Zora\image\movement\lie\21.png;D:\Qt\Qtproject\Zora\image\movement\lie\46.png;D:\Qt\Qtproject\Zora\image\movement\lie\13.png;D:\Qt\Qtproject\Zora\image\movement\lie\38.png;D:\Qt\Qtproject\Zora\image\movement\lie\53.png;D:\Qt\Qtproject\Zora\image\movement\lie\20.png;D:\Qt\Qtproject\Zora\image\movement\lie\9.png;D:\Qt\Qtproject\Zora\image\movement\lie\45.png;D:\Qt\Qtproject\Zora\image\movement\lie\37.png;D:\Qt\Qtproject\Zora\image\movement\lie\12.png;D:\Qt\Qtproject\Zora\image\movement\lie\29.png;D:\Qt\Qtproject\Zora\image\movement\lie\52.png;D:\Qt\Qtproject\Zora\image\movement\lie\8.png;D:\Qt\Qtproject\Zora\image\movement\lie\44.png;D:\Qt\Qtproject\Zora\image\movement\lie\36.png;D:\Qt\Qtproject\Zora\image\movement\lie\11.png;D:\Qt\Qtproject\Zora\image\movement\lie\28.png;D:\Qt\Qtproject\Zora\image\movement\lie\51.png;D:\Qt\Qtproject\Zora\image\movement\lie\7.png;D:\Qt\Qtproject\Zora\image\movement\lie\43.png;D:\Qt\Qtproject\Zora\image\movement\lie\35.png;D:\Qt\Qtproject\Zora\image\movement\lie\10.png;D:\Qt\Qtproject\Zora\image\movement\lie\27.png;D:\Qt\Qtproject\Zora\image\movement\lie\50.png;D:\Qt\Qtproject\Zora\image\movement\lie\19.png;D:\Qt\Qtproject\Zora\image\movement\lie\6.png;D:\Qt\Qtproject\Zora\image\movement\lie\42.png;D:\Qt\Qtproject\Zora\image\movement\lie\34.png;D:\Qt\Qtproject\Zora\image\movement\lie\26.png;D:\Qt\Qtproject\Zora\image\movement\lie\18.png;D:\Qt\Qtproject\Zora\image\movement\lie\5.png;D:\Qt\Qtproject\Zora\image\movement\lie\41.png;D:\Qt\Qtproject\Zora\image\movement\lie\33.png;D:\Qt\Qtproject\Zora\image\movement\lie\25.png;D:\Qt\Qtproject\Zora\image\movement\lie\17.png;D:\Qt\Qtproject\Zora\image\movement\lie\4.png;D:\Qt\Qtproject\Zora\image\movement\lie\40.png;D:\Qt\Qtproject\Zora\image\movement\stand\30.png;D:\Qt\Qtproject\Zora\image\movement\stand\31.png;D:\Qt\Qtproject\Zora\image\movement\stand\32.png;D:\Qt\Qtproject\Zora\image\movement\stand\33.png;D:\Qt\Qtproject\Zora\image\movement\stand\20.png;D:\Qt\Qtproject\Zora\image\movement\stand\21.png;D:\Qt\Qtproject\Zora\image\movement\stand\22.png;D:\Qt\Qtproject\Zora\image\movement\stand\23.png;D:\Qt\Qtproject\Zora\image\movement\stand\24.png;D:\Qt\Qtproject\Zora\image\movement\stand\1.png;D:\Qt\Qtproject\Zora\image\movement\stand\25.png;D:\Qt\Qtproject\Zora\image\movement\stand\2.png;D:\Qt\Qtproject\Zora\image\movement\stand\10.png;D:\Qt\Qtproject\Zora\image\movement\stand\26.png;D:\Qt\Qtproject\Zora\image\movement\stand\3.png;D:\Qt\Qtproject\Zora\image\movement\stand\11.png;D:\Qt\Qtproject\Zora\image\movement\stand\27.png;D:\Qt\Qtproject\Zora\image\movement\stand\4.png;D:\Qt\Qtproject\Zora\image\movement\stand\12.png;D:\Qt\Qtproject\Zora\image\movement\stand\28.png;D:\Qt\Qtproject\Zora\image\movement\stand\5.png;D:\Qt\Qtproject\Zora\image\movement\stand\13.png;D:\Qt\Qtproject\Zora\image\movement\stand\29.png;D:\Qt\Qtproject\Zora\image\movement\stand\6.png;D:\Qt\Qtproject\Zora\image\movement\stand\14.png;D:\Qt\Qtproject\Zora\image\movement\stand\15.png;D:\Qt\Qtproject\Zora\image\movement\stand\7.png;D:\Qt\Qtproject\Zora\image\movement\stand\8.png;D:\Qt\Qtproject\Zora\image\movement\stand\16.png;D:\Qt\Qtproject\Zora\image\movement\stand\9.png;D:\Qt\Qtproject\Zora\image\movement\stand\17.png;D:\Qt\Qtproject\Zora\image\movement\stand\18.png;D:\Qt\Qtproject\Zora\image\movement\stand\19.png;D:\Qt\Qtproject\Zora\image\movement\tumble\32.png;D:\Qt\Qtproject\Zora\image\movement\tumble\24.png;D:\Qt\Qtproject\Zora\image\movement\tumble\49.png;D:\Qt\Qtproject\Zora\image\movement\tumble\16.png;D:\Qt\Qtproject\Zora\image\movement\tumble\3.png;D:\Qt\Qtproject\Zora\image\movement\tumble\31.png;D:\Qt\Qtproject\Zora\image\movement\tumble\56.png;D:\Qt\Qtproject\Zora\image\movement\tumble\23.png;D:\Qt\Qtproject\Zora\image\movement\tumble\48.png;D:\Qt\Qtproject\Zora\image\movement\tumble\15.png;D:\Qt\Qtproject\Zora\image\movement\tumble\2.png;D:\Qt\Qtproject\Zora\image\movement\tumble\30.png;D:\Qt\Qtproject\Zora\image\movement\tumble\55.png;D:\Qt\Qtproject\Zora\image\movement\tumble\22.png;D:\Qt\Qtproject\Zora\image\movement\tumble\47.png;D:\Qt\Qtproject\Zora\image\movement\tumble\14.png;D:\Qt\Qtproject\Zora\image\movement\tumble\39.png;D:\Qt\Qtproject\Zora\image\movement\tumble\1.png;D:\Qt\Qtproject\Zora\image\movement\tumble\54.png;D:\Qt\Qtproject\Zora\image\movement\tumble\21.png;D:\Qt\Qtproject\Zora\image\movement\tumble\46.png;D:\Qt\Qtproject\Zora\image\movement\tumble\13.png;D:\Qt\Qtproject\Zora\image\movement\tumble\38.png;D:\Qt\Qtproject\Zora\image\movement\tumble\53.png;D:\Qt\Qtproject\Zora\image\movement\tumble\20.png;D:\Qt\Qtproject\Zora\image\movement\tumble\9.png;D:\Qt\Qtproject\Zora\image\movement\tumble\45.png;D:\Qt\Qtproject\Zora\image\movement\tumble\37.png;D:\Qt\Qtproject\Zora\image\movement\tumble\12.png;D:\Qt\Qtproject\Zora\image\movement\tumble\29.png;D:\Qt\Qtproject\Zora\image\movement\tumble\52.png;D:\Qt\Qtproject\Zora\image\movement\tumble\8.png;D:\Qt\Qtproject\Zora\image\movement\tumble\44.png;D:\Qt\Qtproject\Zora\image\movement\tumble\36.png;D:\Qt\Qtproject\Zora\image\movement\tumble\11.png;D:\Qt\Qtproject\Zora\image\movement\tumble\28.png;D:\Qt\Qtproject\Zora\image\movement\tumble\51.png;D:\Qt\Qtproject\Zora\image\movement\tumble\7.png;D:\Qt\Qtproject\Zora\image\movement\tumble\43.png;D:\Qt\Qtproject\Zora\image\movement\tumble\35.png;D:\Qt\Qtproject\Zora\image\movement\tumble\10.png;D:\Qt\Qtproject\Zora\image\movement\tumble\27.png;D:\Qt\Qtproject\Zora\image\movement\tumble\50.png;D:\Qt\Qtproject\Zora\image\movement\tumble\19.png;D:\Qt\Qtproject\Zora\image\movement\tumble\6.png;D:\Qt\Qtproject\Zora\image\movement\tumble\42.png;D:\Qt\Qtproject\Zora\image\movement\tumble\34.png;D:\Qt\Qtproject\Zora\image\movement\tumble\26.png;D:\Qt\Qtproject\Zora\image\movement\tumble\18.png;D:\Qt\Qtproject\Zora\image\movement\tumble\5.png;D:\Qt\Qtproject\Zora\image\movement\tumble\41.png;D:\Qt\Qtproject\Zora\image\movement\tumble\33.png;D:\Qt\Qtproject\Zora\image\movement\tumble\25.png;D:\Qt\Qtproject\Zora\image\movement\tumble\17.png;D:\Qt\Qtproject\Zora\image\movement\tumble\4.png;D:\Qt\Qtproject\Zora\image\movement\tumble\40.png;D:\ProgramData\Anaconda3\Library\bin\rcc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Qt\Qtproject\Zora\build\Zora_autogen\EWIEGA46WW\qrc_image.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Automatic RCC for image.qrc</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd D:\Qt\Qtproject\Zora\build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E cmake_autorcc D:/Qt/Qtproject/Zora/build/CMakeFiles/Zora_autogen.dir/AutoRcc_image_EWIEGA46WW_Info.json Debug
+if %errorlevel% neq 0 goto :cmEnd
+D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E cmake_autorcc D:/Qt/Qtproject/Zora/build/CMakeFiles/Zora_autogen.dir/AutoRcc_image_EWIEGA46WW_Info.json Release
+if %errorlevel% neq 0 goto :cmEnd
+D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E cmake_autorcc D:/Qt/Qtproject/Zora/build/CMakeFiles/Zora_autogen.dir/AutoRcc_image_EWIEGA46WW_Info.json MinSizeRel
+if %errorlevel% neq 0 goto :cmEnd
+D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E cmake_autorcc D:/Qt/Qtproject/Zora/build/CMakeFiles/Zora_autogen.dir/AutoRcc_image_EWIEGA46WW_Info.json RelWithDebInfo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Qt\Qtproject\Zora\image.qrc;D:\Qt\Qtproject\Zora\build\CMakeFiles\Zora_autogen.dir\AutoRcc_image_EWIEGA46WW_Info.json;D:\Qt\Qtproject\Zora\image\movement\jump\32.png;D:\Qt\Qtproject\Zora\image\movement\jump\24.png;D:\Qt\Qtproject\Zora\image\movement\jump\49.png;D:\Qt\Qtproject\Zora\image\movement\jump\16.png;D:\Qt\Qtproject\Zora\image\movement\jump\3.png;D:\Qt\Qtproject\Zora\image\movement\jump\31.png;D:\Qt\Qtproject\Zora\image\movement\jump\23.png;D:\Qt\Qtproject\Zora\image\movement\jump\48.png;D:\Qt\Qtproject\Zora\image\movement\jump\15.png;D:\Qt\Qtproject\Zora\image\movement\jump\2.png;D:\Qt\Qtproject\Zora\image\movement\jump\30.png;D:\Qt\Qtproject\Zora\image\movement\jump\55.png;D:\Qt\Qtproject\Zora\image\movement\jump\22.png;D:\Qt\Qtproject\Zora\image\movement\jump\47.png;D:\Qt\Qtproject\Zora\image\movement\jump\14.png;D:\Qt\Qtproject\Zora\image\movement\jump\39.png;D:\Qt\Qtproject\Zora\image\movement\jump\1.png;D:\Qt\Qtproject\Zora\image\movement\jump\54.png;D:\Qt\Qtproject\Zora\image\movement\jump\21.png;D:\Qt\Qtproject\Zora\image\movement\jump\46.png;D:\Qt\Qtproject\Zora\image\movement\jump\13.png;D:\Qt\Qtproject\Zora\image\movement\jump\38.png;D:\Qt\Qtproject\Zora\image\movement\jump\53.png;D:\Qt\Qtproject\Zora\image\movement\jump\20.png;D:\Qt\Qtproject\Zora\image\movement\jump\9.png;D:\Qt\Qtproject\Zora\image\movement\jump\45.png;D:\Qt\Qtproject\Zora\image\movement\jump\37.png;D:\Qt\Qtproject\Zora\image\movement\jump\12.png;D:\Qt\Qtproject\Zora\image\movement\jump\29.png;D:\Qt\Qtproject\Zora\image\movement\jump\52.png;D:\Qt\Qtproject\Zora\image\movement\jump\8.png;D:\Qt\Qtproject\Zora\image\movement\jump\44.png;D:\Qt\Qtproject\Zora\image\movement\jump\36.png;D:\Qt\Qtproject\Zora\image\movement\jump\11.png;D:\Qt\Qtproject\Zora\image\movement\jump\28.png;D:\Qt\Qtproject\Zora\image\movement\jump\51.png;D:\Qt\Qtproject\Zora\image\movement\jump\7.png;D:\Qt\Qtproject\Zora\image\movement\jump\43.png;D:\Qt\Qtproject\Zora\image\movement\jump\35.png;D:\Qt\Qtproject\Zora\image\movement\jump\10.png;D:\Qt\Qtproject\Zora\image\movement\jump\27.png;D:\Qt\Qtproject\Zora\image\movement\jump\50.png;D:\Qt\Qtproject\Zora\image\movement\jump\19.png;D:\Qt\Qtproject\Zora\image\movement\jump\6.png;D:\Qt\Qtproject\Zora\image\movement\jump\42.png;D:\Qt\Qtproject\Zora\image\movement\jump\34.png;D:\Qt\Qtproject\Zora\image\movement\jump\26.png;D:\Qt\Qtproject\Zora\image\movement\jump\18.png;D:\Qt\Qtproject\Zora\image\movement\jump\5.png;D:\Qt\Qtproject\Zora\image\movement\jump\41.png;D:\Qt\Qtproject\Zora\image\movement\jump\33.png;D:\Qt\Qtproject\Zora\image\movement\jump\25.png;D:\Qt\Qtproject\Zora\image\movement\jump\17.png;D:\Qt\Qtproject\Zora\image\movement\jump\4.png;D:\Qt\Qtproject\Zora\image\movement\jump\40.png;D:\Qt\Qtproject\Zora\image\movement\lie\32.png;D:\Qt\Qtproject\Zora\image\movement\lie\24.png;D:\Qt\Qtproject\Zora\image\movement\lie\49.png;D:\Qt\Qtproject\Zora\image\movement\lie\16.png;D:\Qt\Qtproject\Zora\image\movement\lie\3.png;D:\Qt\Qtproject\Zora\image\movement\lie\31.png;D:\Qt\Qtproject\Zora\image\movement\lie\56.png;D:\Qt\Qtproject\Zora\image\movement\lie\23.png;D:\Qt\Qtproject\Zora\image\movement\lie\48.png;D:\Qt\Qtproject\Zora\image\movement\lie\15.png;D:\Qt\Qtproject\Zora\image\movement\lie\2.png;D:\Qt\Qtproject\Zora\image\movement\lie\30.png;D:\Qt\Qtproject\Zora\image\movement\lie\55.png;D:\Qt\Qtproject\Zora\image\movement\lie\22.png;D:\Qt\Qtproject\Zora\image\movement\lie\47.png;D:\Qt\Qtproject\Zora\image\movement\lie\14.png;D:\Qt\Qtproject\Zora\image\movement\lie\39.png;D:\Qt\Qtproject\Zora\image\movement\lie\1.png;D:\Qt\Qtproject\Zora\image\movement\lie\54.png;D:\Qt\Qtproject\Zora\image\movement\lie\21.png;D:\Qt\Qtproject\Zora\image\movement\lie\46.png;D:\Qt\Qtproject\Zora\image\movement\lie\13.png;D:\Qt\Qtproject\Zora\image\movement\lie\38.png;D:\Qt\Qtproject\Zora\image\movement\lie\53.png;D:\Qt\Qtproject\Zora\image\movement\lie\20.png;D:\Qt\Qtproject\Zora\image\movement\lie\9.png;D:\Qt\Qtproject\Zora\image\movement\lie\45.png;D:\Qt\Qtproject\Zora\image\movement\lie\37.png;D:\Qt\Qtproject\Zora\image\movement\lie\12.png;D:\Qt\Qtproject\Zora\image\movement\lie\29.png;D:\Qt\Qtproject\Zora\image\movement\lie\52.png;D:\Qt\Qtproject\Zora\image\movement\lie\8.png;D:\Qt\Qtproject\Zora\image\movement\lie\44.png;D:\Qt\Qtproject\Zora\image\movement\lie\36.png;D:\Qt\Qtproject\Zora\image\movement\lie\11.png;D:\Qt\Qtproject\Zora\image\movement\lie\28.png;D:\Qt\Qtproject\Zora\image\movement\lie\51.png;D:\Qt\Qtproject\Zora\image\movement\lie\7.png;D:\Qt\Qtproject\Zora\image\movement\lie\43.png;D:\Qt\Qtproject\Zora\image\movement\lie\35.png;D:\Qt\Qtproject\Zora\image\movement\lie\10.png;D:\Qt\Qtproject\Zora\image\movement\lie\27.png;D:\Qt\Qtproject\Zora\image\movement\lie\50.png;D:\Qt\Qtproject\Zora\image\movement\lie\19.png;D:\Qt\Qtproject\Zora\image\movement\lie\6.png;D:\Qt\Qtproject\Zora\image\movement\lie\42.png;D:\Qt\Qtproject\Zora\image\movement\lie\34.png;D:\Qt\Qtproject\Zora\image\movement\lie\26.png;D:\Qt\Qtproject\Zora\image\movement\lie\18.png;D:\Qt\Qtproject\Zora\image\movement\lie\5.png;D:\Qt\Qtproject\Zora\image\movement\lie\41.png;D:\Qt\Qtproject\Zora\image\movement\lie\33.png;D:\Qt\Qtproject\Zora\image\movement\lie\25.png;D:\Qt\Qtproject\Zora\image\movement\lie\17.png;D:\Qt\Qtproject\Zora\image\movement\lie\4.png;D:\Qt\Qtproject\Zora\image\movement\lie\40.png;D:\Qt\Qtproject\Zora\image\movement\stand\30.png;D:\Qt\Qtproject\Zora\image\movement\stand\31.png;D:\Qt\Qtproject\Zora\image\movement\stand\32.png;D:\Qt\Qtproject\Zora\image\movement\stand\33.png;D:\Qt\Qtproject\Zora\image\movement\stand\20.png;D:\Qt\Qtproject\Zora\image\movement\stand\21.png;D:\Qt\Qtproject\Zora\image\movement\stand\22.png;D:\Qt\Qtproject\Zora\image\movement\stand\23.png;D:\Qt\Qtproject\Zora\image\movement\stand\24.png;D:\Qt\Qtproject\Zora\image\movement\stand\1.png;D:\Qt\Qtproject\Zora\image\movement\stand\25.png;D:\Qt\Qtproject\Zora\image\movement\stand\2.png;D:\Qt\Qtproject\Zora\image\movement\stand\10.png;D:\Qt\Qtproject\Zora\image\movement\stand\26.png;D:\Qt\Qtproject\Zora\image\movement\stand\3.png;D:\Qt\Qtproject\Zora\image\movement\stand\11.png;D:\Qt\Qtproject\Zora\image\movement\stand\27.png;D:\Qt\Qtproject\Zora\image\movement\stand\4.png;D:\Qt\Qtproject\Zora\image\movement\stand\12.png;D:\Qt\Qtproject\Zora\image\movement\stand\28.png;D:\Qt\Qtproject\Zora\image\movement\stand\5.png;D:\Qt\Qtproject\Zora\image\movement\stand\13.png;D:\Qt\Qtproject\Zora\image\movement\stand\29.png;D:\Qt\Qtproject\Zora\image\movement\stand\6.png;D:\Qt\Qtproject\Zora\image\movement\stand\14.png;D:\Qt\Qtproject\Zora\image\movement\stand\15.png;D:\Qt\Qtproject\Zora\image\movement\stand\7.png;D:\Qt\Qtproject\Zora\image\movement\stand\8.png;D:\Qt\Qtproject\Zora\image\movement\stand\16.png;D:\Qt\Qtproject\Zora\image\movement\stand\9.png;D:\Qt\Qtproject\Zora\image\movement\stand\17.png;D:\Qt\Qtproject\Zora\image\movement\stand\18.png;D:\Qt\Qtproject\Zora\image\movement\stand\19.png;D:\Qt\Qtproject\Zora\image\movement\tumble\32.png;D:\Qt\Qtproject\Zora\image\movement\tumble\24.png;D:\Qt\Qtproject\Zora\image\movement\tumble\49.png;D:\Qt\Qtproject\Zora\image\movement\tumble\16.png;D:\Qt\Qtproject\Zora\image\movement\tumble\3.png;D:\Qt\Qtproject\Zora\image\movement\tumble\31.png;D:\Qt\Qtproject\Zora\image\movement\tumble\56.png;D:\Qt\Qtproject\Zora\image\movement\tumble\23.png;D:\Qt\Qtproject\Zora\image\movement\tumble\48.png;D:\Qt\Qtproject\Zora\image\movement\tumble\15.png;D:\Qt\Qtproject\Zora\image\movement\tumble\2.png;D:\Qt\Qtproject\Zora\image\movement\tumble\30.png;D:\Qt\Qtproject\Zora\image\movement\tumble\55.png;D:\Qt\Qtproject\Zora\image\movement\tumble\22.png;D:\Qt\Qtproject\Zora\image\movement\tumble\47.png;D:\Qt\Qtproject\Zora\image\movement\tumble\14.png;D:\Qt\Qtproject\Zora\image\movement\tumble\39.png;D:\Qt\Qtproject\Zora\image\movement\tumble\1.png;D:\Qt\Qtproject\Zora\image\movement\tumble\54.png;D:\Qt\Qtproject\Zora\image\movement\tumble\21.png;D:\Qt\Qtproject\Zora\image\movement\tumble\46.png;D:\Qt\Qtproject\Zora\image\movement\tumble\13.png;D:\Qt\Qtproject\Zora\image\movement\tumble\38.png;D:\Qt\Qtproject\Zora\image\movement\tumble\53.png;D:\Qt\Qtproject\Zora\image\movement\tumble\20.png;D:\Qt\Qtproject\Zora\image\movement\tumble\9.png;D:\Qt\Qtproject\Zora\image\movement\tumble\45.png;D:\Qt\Qtproject\Zora\image\movement\tumble\37.png;D:\Qt\Qtproject\Zora\image\movement\tumble\12.png;D:\Qt\Qtproject\Zora\image\movement\tumble\29.png;D:\Qt\Qtproject\Zora\image\movement\tumble\52.png;D:\Qt\Qtproject\Zora\image\movement\tumble\8.png;D:\Qt\Qtproject\Zora\image\movement\tumble\44.png;D:\Qt\Qtproject\Zora\image\movement\tumble\36.png;D:\Qt\Qtproject\Zora\image\movement\tumble\11.png;D:\Qt\Qtproject\Zora\image\movement\tumble\28.png;D:\Qt\Qtproject\Zora\image\movement\tumble\51.png;D:\Qt\Qtproject\Zora\image\movement\tumble\7.png;D:\Qt\Qtproject\Zora\image\movement\tumble\43.png;D:\Qt\Qtproject\Zora\image\movement\tumble\35.png;D:\Qt\Qtproject\Zora\image\movement\tumble\10.png;D:\Qt\Qtproject\Zora\image\movement\tumble\27.png;D:\Qt\Qtproject\Zora\image\movement\tumble\50.png;D:\Qt\Qtproject\Zora\image\movement\tumble\19.png;D:\Qt\Qtproject\Zora\image\movement\tumble\6.png;D:\Qt\Qtproject\Zora\image\movement\tumble\42.png;D:\Qt\Qtproject\Zora\image\movement\tumble\34.png;D:\Qt\Qtproject\Zora\image\movement\tumble\26.png;D:\Qt\Qtproject\Zora\image\movement\tumble\18.png;D:\Qt\Qtproject\Zora\image\movement\tumble\5.png;D:\Qt\Qtproject\Zora\image\movement\tumble\41.png;D:\Qt\Qtproject\Zora\image\movement\tumble\33.png;D:\Qt\Qtproject\Zora\image\movement\tumble\25.png;D:\Qt\Qtproject\Zora\image\movement\tumble\17.png;D:\Qt\Qtproject\Zora\image\movement\tumble\4.png;D:\Qt\Qtproject\Zora\image\movement\tumble\40.png;D:\ProgramData\Anaconda3\Library\bin\rcc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Qt\Qtproject\Zora\build\Zora_autogen\EWIEGA46WW\qrc_image.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Automatic RCC for image.qrc</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd D:\Qt\Qtproject\Zora\build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E cmake_autorcc D:/Qt/Qtproject/Zora/build/CMakeFiles/Zora_autogen.dir/AutoRcc_image_EWIEGA46WW_Info.json Debug
+if %errorlevel% neq 0 goto :cmEnd
+D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E cmake_autorcc D:/Qt/Qtproject/Zora/build/CMakeFiles/Zora_autogen.dir/AutoRcc_image_EWIEGA46WW_Info.json Release
+if %errorlevel% neq 0 goto :cmEnd
+D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E cmake_autorcc D:/Qt/Qtproject/Zora/build/CMakeFiles/Zora_autogen.dir/AutoRcc_image_EWIEGA46WW_Info.json MinSizeRel
+if %errorlevel% neq 0 goto :cmEnd
+D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E cmake_autorcc D:/Qt/Qtproject/Zora/build/CMakeFiles/Zora_autogen.dir/AutoRcc_image_EWIEGA46WW_Info.json RelWithDebInfo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Qt\Qtproject\Zora\image.qrc;D:\Qt\Qtproject\Zora\build\CMakeFiles\Zora_autogen.dir\AutoRcc_image_EWIEGA46WW_Info.json;D:\Qt\Qtproject\Zora\image\movement\jump\32.png;D:\Qt\Qtproject\Zora\image\movement\jump\24.png;D:\Qt\Qtproject\Zora\image\movement\jump\49.png;D:\Qt\Qtproject\Zora\image\movement\jump\16.png;D:\Qt\Qtproject\Zora\image\movement\jump\3.png;D:\Qt\Qtproject\Zora\image\movement\jump\31.png;D:\Qt\Qtproject\Zora\image\movement\jump\23.png;D:\Qt\Qtproject\Zora\image\movement\jump\48.png;D:\Qt\Qtproject\Zora\image\movement\jump\15.png;D:\Qt\Qtproject\Zora\image\movement\jump\2.png;D:\Qt\Qtproject\Zora\image\movement\jump\30.png;D:\Qt\Qtproject\Zora\image\movement\jump\55.png;D:\Qt\Qtproject\Zora\image\movement\jump\22.png;D:\Qt\Qtproject\Zora\image\movement\jump\47.png;D:\Qt\Qtproject\Zora\image\movement\jump\14.png;D:\Qt\Qtproject\Zora\image\movement\jump\39.png;D:\Qt\Qtproject\Zora\image\movement\jump\1.png;D:\Qt\Qtproject\Zora\image\movement\jump\54.png;D:\Qt\Qtproject\Zora\image\movement\jump\21.png;D:\Qt\Qtproject\Zora\image\movement\jump\46.png;D:\Qt\Qtproject\Zora\image\movement\jump\13.png;D:\Qt\Qtproject\Zora\image\movement\jump\38.png;D:\Qt\Qtproject\Zora\image\movement\jump\53.png;D:\Qt\Qtproject\Zora\image\movement\jump\20.png;D:\Qt\Qtproject\Zora\image\movement\jump\9.png;D:\Qt\Qtproject\Zora\image\movement\jump\45.png;D:\Qt\Qtproject\Zora\image\movement\jump\37.png;D:\Qt\Qtproject\Zora\image\movement\jump\12.png;D:\Qt\Qtproject\Zora\image\movement\jump\29.png;D:\Qt\Qtproject\Zora\image\movement\jump\52.png;D:\Qt\Qtproject\Zora\image\movement\jump\8.png;D:\Qt\Qtproject\Zora\image\movement\jump\44.png;D:\Qt\Qtproject\Zora\image\movement\jump\36.png;D:\Qt\Qtproject\Zora\image\movement\jump\11.png;D:\Qt\Qtproject\Zora\image\movement\jump\28.png;D:\Qt\Qtproject\Zora\image\movement\jump\51.png;D:\Qt\Qtproject\Zora\image\movement\jump\7.png;D:\Qt\Qtproject\Zora\image\movement\jump\43.png;D:\Qt\Qtproject\Zora\image\movement\jump\35.png;D:\Qt\Qtproject\Zora\image\movement\jump\10.png;D:\Qt\Qtproject\Zora\image\movement\jump\27.png;D:\Qt\Qtproject\Zora\image\movement\jump\50.png;D:\Qt\Qtproject\Zora\image\movement\jump\19.png;D:\Qt\Qtproject\Zora\image\movement\jump\6.png;D:\Qt\Qtproject\Zora\image\movement\jump\42.png;D:\Qt\Qtproject\Zora\image\movement\jump\34.png;D:\Qt\Qtproject\Zora\image\movement\jump\26.png;D:\Qt\Qtproject\Zora\image\movement\jump\18.png;D:\Qt\Qtproject\Zora\image\movement\jump\5.png;D:\Qt\Qtproject\Zora\image\movement\jump\41.png;D:\Qt\Qtproject\Zora\image\movement\jump\33.png;D:\Qt\Qtproject\Zora\image\movement\jump\25.png;D:\Qt\Qtproject\Zora\image\movement\jump\17.png;D:\Qt\Qtproject\Zora\image\movement\jump\4.png;D:\Qt\Qtproject\Zora\image\movement\jump\40.png;D:\Qt\Qtproject\Zora\image\movement\lie\32.png;D:\Qt\Qtproject\Zora\image\movement\lie\24.png;D:\Qt\Qtproject\Zora\image\movement\lie\49.png;D:\Qt\Qtproject\Zora\image\movement\lie\16.png;D:\Qt\Qtproject\Zora\image\movement\lie\3.png;D:\Qt\Qtproject\Zora\image\movement\lie\31.png;D:\Qt\Qtproject\Zora\image\movement\lie\56.png;D:\Qt\Qtproject\Zora\image\movement\lie\23.png;D:\Qt\Qtproject\Zora\image\movement\lie\48.png;D:\Qt\Qtproject\Zora\image\movement\lie\15.png;D:\Qt\Qtproject\Zora\image\movement\lie\2.png;D:\Qt\Qtproject\Zora\image\movement\lie\30.png;D:\Qt\Qtproject\Zora\image\movement\lie\55.png;D:\Qt\Qtproject\Zora\image\movement\lie\22.png;D:\Qt\Qtproject\Zora\image\movement\lie\47.png;D:\Qt\Qtproject\Zora\image\movement\lie\14.png;D:\Qt\Qtproject\Zora\image\movement\lie\39.png;D:\Qt\Qtproject\Zora\image\movement\lie\1.png;D:\Qt\Qtproject\Zora\image\movement\lie\54.png;D:\Qt\Qtproject\Zora\image\movement\lie\21.png;D:\Qt\Qtproject\Zora\image\movement\lie\46.png;D:\Qt\Qtproject\Zora\image\movement\lie\13.png;D:\Qt\Qtproject\Zora\image\movement\lie\38.png;D:\Qt\Qtproject\Zora\image\movement\lie\53.png;D:\Qt\Qtproject\Zora\image\movement\lie\20.png;D:\Qt\Qtproject\Zora\image\movement\lie\9.png;D:\Qt\Qtproject\Zora\image\movement\lie\45.png;D:\Qt\Qtproject\Zora\image\movement\lie\37.png;D:\Qt\Qtproject\Zora\image\movement\lie\12.png;D:\Qt\Qtproject\Zora\image\movement\lie\29.png;D:\Qt\Qtproject\Zora\image\movement\lie\52.png;D:\Qt\Qtproject\Zora\image\movement\lie\8.png;D:\Qt\Qtproject\Zora\image\movement\lie\44.png;D:\Qt\Qtproject\Zora\image\movement\lie\36.png;D:\Qt\Qtproject\Zora\image\movement\lie\11.png;D:\Qt\Qtproject\Zora\image\movement\lie\28.png;D:\Qt\Qtproject\Zora\image\movement\lie\51.png;D:\Qt\Qtproject\Zora\image\movement\lie\7.png;D:\Qt\Qtproject\Zora\image\movement\lie\43.png;D:\Qt\Qtproject\Zora\image\movement\lie\35.png;D:\Qt\Qtproject\Zora\image\movement\lie\10.png;D:\Qt\Qtproject\Zora\image\movement\lie\27.png;D:\Qt\Qtproject\Zora\image\movement\lie\50.png;D:\Qt\Qtproject\Zora\image\movement\lie\19.png;D:\Qt\Qtproject\Zora\image\movement\lie\6.png;D:\Qt\Qtproject\Zora\image\movement\lie\42.png;D:\Qt\Qtproject\Zora\image\movement\lie\34.png;D:\Qt\Qtproject\Zora\image\movement\lie\26.png;D:\Qt\Qtproject\Zora\image\movement\lie\18.png;D:\Qt\Qtproject\Zora\image\movement\lie\5.png;D:\Qt\Qtproject\Zora\image\movement\lie\41.png;D:\Qt\Qtproject\Zora\image\movement\lie\33.png;D:\Qt\Qtproject\Zora\image\movement\lie\25.png;D:\Qt\Qtproject\Zora\image\movement\lie\17.png;D:\Qt\Qtproject\Zora\image\movement\lie\4.png;D:\Qt\Qtproject\Zora\image\movement\lie\40.png;D:\Qt\Qtproject\Zora\image\movement\stand\30.png;D:\Qt\Qtproject\Zora\image\movement\stand\31.png;D:\Qt\Qtproject\Zora\image\movement\stand\32.png;D:\Qt\Qtproject\Zora\image\movement\stand\33.png;D:\Qt\Qtproject\Zora\image\movement\stand\20.png;D:\Qt\Qtproject\Zora\image\movement\stand\21.png;D:\Qt\Qtproject\Zora\image\movement\stand\22.png;D:\Qt\Qtproject\Zora\image\movement\stand\23.png;D:\Qt\Qtproject\Zora\image\movement\stand\24.png;D:\Qt\Qtproject\Zora\image\movement\stand\1.png;D:\Qt\Qtproject\Zora\image\movement\stand\25.png;D:\Qt\Qtproject\Zora\image\movement\stand\2.png;D:\Qt\Qtproject\Zora\image\movement\stand\10.png;D:\Qt\Qtproject\Zora\image\movement\stand\26.png;D:\Qt\Qtproject\Zora\image\movement\stand\3.png;D:\Qt\Qtproject\Zora\image\movement\stand\11.png;D:\Qt\Qtproject\Zora\image\movement\stand\27.png;D:\Qt\Qtproject\Zora\image\movement\stand\4.png;D:\Qt\Qtproject\Zora\image\movement\stand\12.png;D:\Qt\Qtproject\Zora\image\movement\stand\28.png;D:\Qt\Qtproject\Zora\image\movement\stand\5.png;D:\Qt\Qtproject\Zora\image\movement\stand\13.png;D:\Qt\Qtproject\Zora\image\movement\stand\29.png;D:\Qt\Qtproject\Zora\image\movement\stand\6.png;D:\Qt\Qtproject\Zora\image\movement\stand\14.png;D:\Qt\Qtproject\Zora\image\movement\stand\15.png;D:\Qt\Qtproject\Zora\image\movement\stand\7.png;D:\Qt\Qtproject\Zora\image\movement\stand\8.png;D:\Qt\Qtproject\Zora\image\movement\stand\16.png;D:\Qt\Qtproject\Zora\image\movement\stand\9.png;D:\Qt\Qtproject\Zora\image\movement\stand\17.png;D:\Qt\Qtproject\Zora\image\movement\stand\18.png;D:\Qt\Qtproject\Zora\image\movement\stand\19.png;D:\Qt\Qtproject\Zora\image\movement\tumble\32.png;D:\Qt\Qtproject\Zora\image\movement\tumble\24.png;D:\Qt\Qtproject\Zora\image\movement\tumble\49.png;D:\Qt\Qtproject\Zora\image\movement\tumble\16.png;D:\Qt\Qtproject\Zora\image\movement\tumble\3.png;D:\Qt\Qtproject\Zora\image\movement\tumble\31.png;D:\Qt\Qtproject\Zora\image\movement\tumble\56.png;D:\Qt\Qtproject\Zora\image\movement\tumble\23.png;D:\Qt\Qtproject\Zora\image\movement\tumble\48.png;D:\Qt\Qtproject\Zora\image\movement\tumble\15.png;D:\Qt\Qtproject\Zora\image\movement\tumble\2.png;D:\Qt\Qtproject\Zora\image\movement\tumble\30.png;D:\Qt\Qtproject\Zora\image\movement\tumble\55.png;D:\Qt\Qtproject\Zora\image\movement\tumble\22.png;D:\Qt\Qtproject\Zora\image\movement\tumble\47.png;D:\Qt\Qtproject\Zora\image\movement\tumble\14.png;D:\Qt\Qtproject\Zora\image\movement\tumble\39.png;D:\Qt\Qtproject\Zora\image\movement\tumble\1.png;D:\Qt\Qtproject\Zora\image\movement\tumble\54.png;D:\Qt\Qtproject\Zora\image\movement\tumble\21.png;D:\Qt\Qtproject\Zora\image\movement\tumble\46.png;D:\Qt\Qtproject\Zora\image\movement\tumble\13.png;D:\Qt\Qtproject\Zora\image\movement\tumble\38.png;D:\Qt\Qtproject\Zora\image\movement\tumble\53.png;D:\Qt\Qtproject\Zora\image\movement\tumble\20.png;D:\Qt\Qtproject\Zora\image\movement\tumble\9.png;D:\Qt\Qtproject\Zora\image\movement\tumble\45.png;D:\Qt\Qtproject\Zora\image\movement\tumble\37.png;D:\Qt\Qtproject\Zora\image\movement\tumble\12.png;D:\Qt\Qtproject\Zora\image\movement\tumble\29.png;D:\Qt\Qtproject\Zora\image\movement\tumble\52.png;D:\Qt\Qtproject\Zora\image\movement\tumble\8.png;D:\Qt\Qtproject\Zora\image\movement\tumble\44.png;D:\Qt\Qtproject\Zora\image\movement\tumble\36.png;D:\Qt\Qtproject\Zora\image\movement\tumble\11.png;D:\Qt\Qtproject\Zora\image\movement\tumble\28.png;D:\Qt\Qtproject\Zora\image\movement\tumble\51.png;D:\Qt\Qtproject\Zora\image\movement\tumble\7.png;D:\Qt\Qtproject\Zora\image\movement\tumble\43.png;D:\Qt\Qtproject\Zora\image\movement\tumble\35.png;D:\Qt\Qtproject\Zora\image\movement\tumble\10.png;D:\Qt\Qtproject\Zora\image\movement\tumble\27.png;D:\Qt\Qtproject\Zora\image\movement\tumble\50.png;D:\Qt\Qtproject\Zora\image\movement\tumble\19.png;D:\Qt\Qtproject\Zora\image\movement\tumble\6.png;D:\Qt\Qtproject\Zora\image\movement\tumble\42.png;D:\Qt\Qtproject\Zora\image\movement\tumble\34.png;D:\Qt\Qtproject\Zora\image\movement\tumble\26.png;D:\Qt\Qtproject\Zora\image\movement\tumble\18.png;D:\Qt\Qtproject\Zora\image\movement\tumble\5.png;D:\Qt\Qtproject\Zora\image\movement\tumble\41.png;D:\Qt\Qtproject\Zora\image\movement\tumble\33.png;D:\Qt\Qtproject\Zora\image\movement\tumble\25.png;D:\Qt\Qtproject\Zora\image\movement\tumble\17.png;D:\Qt\Qtproject\Zora\image\movement\tumble\4.png;D:\Qt\Qtproject\Zora\image\movement\tumble\40.png;D:\ProgramData\Anaconda3\Library\bin\rcc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Qt\Qtproject\Zora\build\Zora_autogen\EWIEGA46WW\qrc_image.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Qt\Qtproject\Zora\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Qt/Qtproject/Zora/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -SD:/Qt/Qtproject/Zora -BD:/Qt/Qtproject/Zora/build --check-stamp-file D:/Qt/Qtproject/Zora/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5\Qt5Config.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5\Qt5ConfigVersion.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5\Qt5ModuleLocation.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QVirtualKeyboardPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;D:\Qt\Qtproject\Zora\build\CMakeFiles\3.28.3-msvc11\CMakeCXXCompiler.cmake;D:\Qt\Qtproject\Zora\build\CMakeFiles\3.28.3-msvc11\CMakeRCCompiler.cmake;D:\Qt\Qtproject\Zora\build\CMakeFiles\3.28.3-msvc11\CMakeSystem.cmake;D:\Qt\Qtproject\Zora\image.qrc;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeCXXInformation.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeCommonLanguageInclude.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeGenericSystem.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeInitializeConfigs.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeLanguageInformation.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeParseArguments.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeRCInformation.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInformation.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInitialize.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Compiler\MSVC-CXX.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Compiler\MSVC.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\Windows-Initialize.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-CXX.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\Windows.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Qt\Qtproject\Zora\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Qt/Qtproject/Zora/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -SD:/Qt/Qtproject/Zora -BD:/Qt/Qtproject/Zora/build --check-stamp-file D:/Qt/Qtproject/Zora/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5\Qt5Config.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5\Qt5ConfigVersion.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5\Qt5ModuleLocation.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QVirtualKeyboardPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;D:\Qt\Qtproject\Zora\build\CMakeFiles\3.28.3-msvc11\CMakeCXXCompiler.cmake;D:\Qt\Qtproject\Zora\build\CMakeFiles\3.28.3-msvc11\CMakeRCCompiler.cmake;D:\Qt\Qtproject\Zora\build\CMakeFiles\3.28.3-msvc11\CMakeSystem.cmake;D:\Qt\Qtproject\Zora\image.qrc;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeCXXInformation.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeCommonLanguageInclude.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeGenericSystem.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeInitializeConfigs.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeLanguageInformation.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeParseArguments.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeRCInformation.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInformation.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInitialize.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Compiler\MSVC-CXX.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Compiler\MSVC.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\Windows-Initialize.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-CXX.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\Windows.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Qt\Qtproject\Zora\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/Qt/Qtproject/Zora/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -SD:/Qt/Qtproject/Zora -BD:/Qt/Qtproject/Zora/build --check-stamp-file D:/Qt/Qtproject/Zora/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5\Qt5Config.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5\Qt5ConfigVersion.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5\Qt5ModuleLocation.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QVirtualKeyboardPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;D:\Qt\Qtproject\Zora\build\CMakeFiles\3.28.3-msvc11\CMakeCXXCompiler.cmake;D:\Qt\Qtproject\Zora\build\CMakeFiles\3.28.3-msvc11\CMakeRCCompiler.cmake;D:\Qt\Qtproject\Zora\build\CMakeFiles\3.28.3-msvc11\CMakeSystem.cmake;D:\Qt\Qtproject\Zora\image.qrc;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeCXXInformation.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeCommonLanguageInclude.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeGenericSystem.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeInitializeConfigs.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeLanguageInformation.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeParseArguments.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeRCInformation.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInformation.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInitialize.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Compiler\MSVC-CXX.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Compiler\MSVC.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\Windows-Initialize.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-CXX.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\Windows.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Qt\Qtproject\Zora\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/Qt/Qtproject/Zora/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -SD:/Qt/Qtproject/Zora -BD:/Qt/Qtproject/Zora/build --check-stamp-file D:/Qt/Qtproject/Zora/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5\Qt5Config.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5\Qt5ConfigVersion.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5\Qt5ModuleLocation.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QVirtualKeyboardPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;D:\ProgramData\Anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;D:\Qt\Qtproject\Zora\build\CMakeFiles\3.28.3-msvc11\CMakeCXXCompiler.cmake;D:\Qt\Qtproject\Zora\build\CMakeFiles\3.28.3-msvc11\CMakeRCCompiler.cmake;D:\Qt\Qtproject\Zora\build\CMakeFiles\3.28.3-msvc11\CMakeSystem.cmake;D:\Qt\Qtproject\Zora\image.qrc;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeCXXInformation.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeCommonLanguageInclude.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeGenericSystem.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeInitializeConfigs.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeLanguageInformation.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeParseArguments.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeRCInformation.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInformation.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInitialize.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Compiler\MSVC-CXX.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Compiler\MSVC.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\Windows-Initialize.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-CXX.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\Windows.cmake;D:\VS\VS2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Qt\Qtproject\Zora\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\Qt\Qtproject\Zora\build\Zora_autogen\mocs_compilation_Debug.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="D:\Qt\Qtproject\Zora\main.cpp" />
+    <ClCompile Include="D:\Qt\Qtproject\Zora\zora.cpp" />
+    <ClInclude Include="D:\Qt\Qtproject\Zora\zora.h" />
+    <None Include="D:\Qt\Qtproject\Zora\zora.ui">
+    </None>
+    <None Include="D:\Qt\Qtproject\Zora\image.qrc">
+    </None>
+    <ClInclude Include="D:\Qt\Qtproject\Zora\build\Zora_autogen\include_Debug\ui_zora.h" />
+    <None Include="D:\Qt\Qtproject\Zora\build\Zora_autogen\autouic_Debug.stamp">
+    </None>
+    <ClCompile Include="D:\Qt\Qtproject\Zora\build\Zora_autogen\EWIEGA46WW\qrc_image.cpp" />
+    <ClCompile Include="D:\Qt\Qtproject\Zora\build\Zora_autogen\mocs_compilation_Release.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClInclude Include="D:\Qt\Qtproject\Zora\build\Zora_autogen\include_Release\ui_zora.h" />
+    <None Include="D:\Qt\Qtproject\Zora\build\Zora_autogen\autouic_Release.stamp">
+    </None>
+    <ClCompile Include="D:\Qt\Qtproject\Zora\build\Zora_autogen\mocs_compilation_MinSizeRel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClInclude Include="D:\Qt\Qtproject\Zora\build\Zora_autogen\include_MinSizeRel\ui_zora.h" />
+    <None Include="D:\Qt\Qtproject\Zora\build\Zora_autogen\autouic_MinSizeRel.stamp">
+    </None>
+    <ClCompile Include="D:\Qt\Qtproject\Zora\build\Zora_autogen\mocs_compilation_RelWithDebInfo.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClInclude Include="D:\Qt\Qtproject\Zora\build\Zora_autogen\include_RelWithDebInfo\ui_zora.h" />
+    <None Include="D:\Qt\Qtproject\Zora\build\Zora_autogen\autouic_RelWithDebInfo.stamp">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\Qt\Qtproject\Zora\build\ZERO_CHECK.vcxproj">
+      <Project>{6875FFB1-6F16-3ECA-B318-70602FC97B79}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Qt\Qtproject\Zora\build\Zora_autogen\mocs_compilation_Debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Qt\Qtproject\Zora\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Qt\Qtproject\Zora\zora.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Qt\Qtproject\Zora\build\Zora_autogen\EWIEGA46WW\qrc_image.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Qt\Qtproject\Zora\build\Zora_autogen\mocs_compilation_Release.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Qt\Qtproject\Zora\build\Zora_autogen\mocs_compilation_MinSizeRel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Qt\Qtproject\Zora\build\Zora_autogen\mocs_compilation_RelWithDebInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\Qt\Qtproject\Zora\zora.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Qt\Qtproject\Zora\build\Zora_autogen\include_Debug\ui_zora.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Qt\Qtproject\Zora\build\Zora_autogen\include_Release\ui_zora.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Qt\Qtproject\Zora\build\Zora_autogen\include_MinSizeRel\ui_zora.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Qt\Qtproject\Zora\build\Zora_autogen\include_RelWithDebInfo\ui_zora.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Qt\Qtproject\Zora\build\CMakeFiles\2e94f77d558b18dba550cfe9aca43e81\autouic_(CONFIG).stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Qt\Qtproject\Zora\build\CMakeFiles\e09b6f4494841c61fbe951f313f5ea20\qrc_image.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Qt\Qtproject\Zora\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\Qt\Qtproject\Zora\zora.ui" />
+    <None Include="D:\Qt\Qtproject\Zora\image.qrc" />
+    <None Include="D:\Qt\Qtproject\Zora\build\Zora_autogen\autouic_Debug.stamp" />
+    <None Include="D:\Qt\Qtproject\Zora\build\Zora_autogen\autouic_Release.stamp" />
+    <None Include="D:\Qt\Qtproject\Zora\build\Zora_autogen\autouic_MinSizeRel.stamp" />
+    <None Include="D:\Qt\Qtproject\Zora\build\Zora_autogen\autouic_RelWithDebInfo.stamp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{96F87C1B-5E52-3DA9-A451-B07E7C3123F3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{8EE12A1E-8C41-3E0E-BA52-7E5E8D11B49E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{EC8C6F84-27A9-3686-BB14-316A5CEA9C51}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
