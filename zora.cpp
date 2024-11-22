@@ -28,8 +28,6 @@ Zora::Zora(QWidget *parent)
     ImageLoad();
     bodyImage = new QLabel(this);//主题图片指针初始化
 
-
-
 }
 
 Zora::~Zora()
