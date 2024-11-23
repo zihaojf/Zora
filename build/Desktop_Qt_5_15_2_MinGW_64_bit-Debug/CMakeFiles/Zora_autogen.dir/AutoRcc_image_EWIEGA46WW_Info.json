@@ -9,6 +9,14 @@
 	"INCLUDE_DIR" : "D:/Qt/Qtproject/Zora/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/Zora_autogen/include",
 	"INPUTS" : 
 	[
+		"D:/Qt/Qtproject/Zora/image/mainbutton_icon/close.png",
+		"D:/Qt/Qtproject/Zora/image/mainbutton_icon/account.png",
+		"D:/Qt/Qtproject/Zora/image/mainbutton_icon/music.png",
+		"D:/Qt/Qtproject/Zora/image/mainbutton_icon/password.png",
+		"D:/Qt/Qtproject/Zora/image/mainbutton_icon/class.png",
+		"D:/Qt/Qtproject/Zora/image/mainbutton_icon/life.png",
+		"D:/Qt/Qtproject/Zora/image/mainbutton_icon/work.png",
+		"D:/Qt/Qtproject/Zora/image/mainbutton_icon/min.png",
 		"D:/Qt/Qtproject/Zora/image/movement/jump/32.png",
 		"D:/Qt/Qtproject/Zora/image/movement/jump/24.png",
 		"D:/Qt/Qtproject/Zora/image/movement/jump/49.png",

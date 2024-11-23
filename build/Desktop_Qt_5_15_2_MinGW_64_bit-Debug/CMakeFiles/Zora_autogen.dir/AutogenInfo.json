@@ -78,6 +78,32 @@
 	"DEP_FILE_RULE_NAME" : "Zora_autogen/timestamp",
 	"HEADERS" : 
 	[
+		[
+			"D:/Qt/Qtproject/Zora/account.h",
+			"MU",
+			"EWIEGA46WW/moc_account.cpp",
+			null
+		],
+		[ "D:/Qt/Qtproject/Zora/life.h", "MU", "EWIEGA46WW/moc_life.cpp", null ],
+		[
+			"D:/Qt/Qtproject/Zora/music.h",
+			"MU",
+			"EWIEGA46WW/moc_music.cpp",
+			null
+		],
+		[
+			"D:/Qt/Qtproject/Zora/password.h",
+			"MU",
+			"EWIEGA46WW/moc_password.cpp",
+			null
+		],
+		[
+			"D:/Qt/Qtproject/Zora/schoolclass.h",
+			"MU",
+			"EWIEGA46WW/moc_schoolclass.cpp",
+			null
+		],
+		[ "D:/Qt/Qtproject/Zora/work.h", "MU", "EWIEGA46WW/moc_work.cpp", null ],
 		[ "D:/Qt/Qtproject/Zora/zora.h", "MU", "EWIEGA46WW/moc_zora.cpp", null ]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -131,7 +157,13 @@
 	"SETTINGS_FILE" : "D:/Qt/Qtproject/Zora/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/CMakeFiles/Zora_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "D:/Qt/Qtproject/Zora/account.cpp", "MU", null ],
+		[ "D:/Qt/Qtproject/Zora/life.cpp", "MU", null ],
 		[ "D:/Qt/Qtproject/Zora/main.cpp", "MU", null ],
+		[ "D:/Qt/Qtproject/Zora/music.cpp", "MU", null ],
+		[ "D:/Qt/Qtproject/Zora/password.cpp", "MU", null ],
+		[ "D:/Qt/Qtproject/Zora/schoolclass.cpp", "MU", null ],
+		[ "D:/Qt/Qtproject/Zora/work.cpp", "MU", null ],
 		[ "D:/Qt/Qtproject/Zora/zora.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],

@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-8b97faae4b99ba46d819.json",
+					"jsonFile" : "directory-.-Debug-0ba9a6cd16178274ad08.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Zora::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Zora-Debug-b4743d1ba3b83f22f07c.json",
+					"jsonFile" : "target-Zora-Debug-035f68f37adf777bb581.json",
 					"name" : "Zora",
 					"projectIndex" : 0
 				},

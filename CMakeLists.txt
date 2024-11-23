@@ -39,6 +39,20 @@ else()
         add_executable(Zora
             ${PROJECT_SOURCES}
             image.qrc
+            music.h music.cpp music.ui
+            account.h account.cpp account.ui
+            schoolclass.h schoolclass.cpp schoolclass.ui
+            work.h work.cpp work.ui
+            password.h password.cpp password.ui
+            life.h life.cpp life.ui
+
+
+
+
+
+
+
+
         )
     endif()
 endif()

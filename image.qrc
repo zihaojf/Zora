@@ -200,5 +200,13 @@
         <file>image/movement/jump/53.png</file>
         <file>image/movement/jump/54.png</file>
         <file>image/movement/jump/55.png</file>
+        <file>image/mainbutton_icon/account.png</file>
+        <file>image/mainbutton_icon/class.png</file>
+        <file>image/mainbutton_icon/close.png</file>
+        <file>image/mainbutton_icon/life.png</file>
+        <file>image/mainbutton_icon/min.png</file>
+        <file>image/mainbutton_icon/music.png</file>
+        <file>image/mainbutton_icon/password.png</file>
+        <file>image/mainbutton_icon/work.png</file>
     </qresource>
 </RCC>

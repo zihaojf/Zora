@@ -37,3 +37,12 @@
 待解决问题：四种动作的图片像素大小不同，导致不同动作图片主体显示的位置不同     byhzh
 
 ## 2024年11月22日
+### 首页按钮
+- closebtn
+- musicbtn
+- accountbtn
+- classbtn
+- workbtn
+- passwordbtn
+- lifebtn
+- minbtn 最小化按钮
