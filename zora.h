@@ -14,6 +14,15 @@
 #include<QSystemTrayIcon>
 #include<vector>
 #include<QRandomGenerator>
+#include<qobject.h>
+
+#include"account.h"
+#include"music.h"
+#include"schoolclass.h"
+#include"work.h"
+#include"life.h"
+#include"password.h"
+
 using namespace std;
 
 QT_BEGIN_NAMESPACE
@@ -49,6 +58,17 @@ private:
     QPushButton *minbtn;
     bool buttonswitch;//记录按钮显示还是隐藏
 
+    //窗口
+    account *account_window;
+    music *music_window;
+    schoolclass *class_window;
+    work *work_window;
+    life *life_window;
+    password *password_window;
+
+    QSystemTrayIcon* psystemtray;//任务栏最小化托盘
+
+
 
 private slots://四个状态槽
     void standMovement();//站立动作
@@ -78,14 +98,17 @@ public:
     void setbutton_invisiable();//设置按钮初始默认隐藏
 
     //各个功能模块
-    void closemovement();
-    void musicmovement();
-    void accountmovement();
-    void classmovement();
-    void workmovement();
-    void passwordmovement();
-    void lifemovement();
-    void minmovement();
+    void closebtn_push();
+    void musicbtn_push();
+    void accountbtn_push();
+    void classbtn_push();
+    void workbtn_push();
+    void passwordbtn_push();
+    void lifebtn_push();
+    void minbtn_push();
+
+    void initpsystemtray();//初始化系统托盘
+    void systemtray_push();//点击系统托盘事件
 
 
 private:

@@ -2,6 +2,11 @@
 #define MUSIC_H
 
 #include <QWidget>
+#include <QBitmap>
+#include <QPainter>
+#include<QWheelEvent>
+#include<QPushButton>
+#include<QButtonGroup>
 
 namespace Ui {
 class music;

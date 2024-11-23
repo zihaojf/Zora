@@ -208,5 +208,6 @@
         <file>image/mainbutton_icon/music.png</file>
         <file>image/mainbutton_icon/password.png</file>
         <file>image/mainbutton_icon/work.png</file>
+        <file>image/icon/systemtray_icon.png</file>
     </qresource>
 </RCC>

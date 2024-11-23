@@ -72,7 +72,11 @@ Zora_autogen/timestamp: \
 	D:/Qt/5.15.2/mingw81_64/include/QtCore/qvarlengtharray.h \
 	D:/Qt/5.15.2/mingw81_64/include/QtCore/qvector.h \
 	D:/Qt/5.15.2/mingw81_64/include/QtCore/qversiontagging.h \
+	D:/Qt/5.15.2/mingw81_64/include/QtGui/QBitmap \
 	D:/Qt/5.15.2/mingw81_64/include/QtGui/QMouseEvent \
+	D:/Qt/5.15.2/mingw81_64/include/QtGui/QPainter \
+	D:/Qt/5.15.2/mingw81_64/include/QtGui/QWheelEvent \
+	D:/Qt/5.15.2/mingw81_64/include/QtGui/qbitmap.h \
 	D:/Qt/5.15.2/mingw81_64/include/QtGui/qbrush.h \
 	D:/Qt/5.15.2/mingw81_64/include/QtGui/qcolor.h \
 	D:/Qt/5.15.2/mingw81_64/include/QtGui/qcursor.h \
@@ -85,13 +89,16 @@ Zora_autogen/timestamp: \
 	D:/Qt/5.15.2/mingw81_64/include/QtGui/qkeysequence.h \
 	D:/Qt/5.15.2/mingw81_64/include/QtGui/qmatrix.h \
 	D:/Qt/5.15.2/mingw81_64/include/QtGui/qpaintdevice.h \
+	D:/Qt/5.15.2/mingw81_64/include/QtGui/qpainter.h \
 	D:/Qt/5.15.2/mingw81_64/include/QtGui/qpalette.h \
+	D:/Qt/5.15.2/mingw81_64/include/QtGui/qpen.h \
 	D:/Qt/5.15.2/mingw81_64/include/QtGui/qpixelformat.h \
 	D:/Qt/5.15.2/mingw81_64/include/QtGui/qpixmap.h \
 	D:/Qt/5.15.2/mingw81_64/include/QtGui/qpolygon.h \
 	D:/Qt/5.15.2/mingw81_64/include/QtGui/qregion.h \
 	D:/Qt/5.15.2/mingw81_64/include/QtGui/qrgb.h \
 	D:/Qt/5.15.2/mingw81_64/include/QtGui/qrgba64.h \
+	D:/Qt/5.15.2/mingw81_64/include/QtGui/qtextoption.h \
 	D:/Qt/5.15.2/mingw81_64/include/QtGui/qtgui-config.h \
 	D:/Qt/5.15.2/mingw81_64/include/QtGui/qtguiglobal.h \
 	D:/Qt/5.15.2/mingw81_64/include/QtGui/qtouchdevice.h \
@@ -99,12 +106,15 @@ Zora_autogen/timestamp: \
 	D:/Qt/5.15.2/mingw81_64/include/QtGui/qvector2d.h \
 	D:/Qt/5.15.2/mingw81_64/include/QtGui/qwindowdefs.h \
 	D:/Qt/5.15.2/mingw81_64/include/QtGui/qwindowdefs_win.h \
+	D:/Qt/5.15.2/mingw81_64/include/QtWidgets/QButtonGroup \
 	D:/Qt/5.15.2/mingw81_64/include/QtWidgets/QCalendarWidget \
 	D:/Qt/5.15.2/mingw81_64/include/QtWidgets/QLabel \
 	D:/Qt/5.15.2/mingw81_64/include/QtWidgets/QMainWindow \
 	D:/Qt/5.15.2/mingw81_64/include/QtWidgets/QPushButton \
 	D:/Qt/5.15.2/mingw81_64/include/QtWidgets/QSystemTrayIcon \
+	D:/Qt/5.15.2/mingw81_64/include/QtWidgets/QWidget \
 	D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qabstractbutton.h \
+	D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qbuttongroup.h \
 	D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qcalendarwidget.h \
 	D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qframe.h \
 	D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qlabel.h \
@@ -152,13 +162,25 @@ Zora_autogen/timestamp: \
 	D:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake \
 	D:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin.cmake \
 	D:/Qt/Qtproject/Zora/CMakeLists.txt \
+	D:/Qt/Qtproject/Zora/account.cpp \
+	D:/Qt/Qtproject/Zora/account.h \
 	D:/Qt/Qtproject/Zora/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake \
 	D:/Qt/Qtproject/Zora/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake \
 	D:/Qt/Qtproject/Zora/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeRCCompiler.cmake \
 	D:/Qt/Qtproject/Zora/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeSystem.cmake \
 	D:/Qt/Qtproject/Zora/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/Zora_autogen/moc_predefs.h \
 	D:/Qt/Qtproject/Zora/image.qrc \
+	D:/Qt/Qtproject/Zora/life.cpp \
+	D:/Qt/Qtproject/Zora/life.h \
 	D:/Qt/Qtproject/Zora/main.cpp \
+	D:/Qt/Qtproject/Zora/music.cpp \
+	D:/Qt/Qtproject/Zora/music.h \
+	D:/Qt/Qtproject/Zora/password.cpp \
+	D:/Qt/Qtproject/Zora/password.h \
+	D:/Qt/Qtproject/Zora/schoolclass.cpp \
+	D:/Qt/Qtproject/Zora/schoolclass.h \
+	D:/Qt/Qtproject/Zora/work.cpp \
+	D:/Qt/Qtproject/Zora/work.h \
 	D:/Qt/Qtproject/Zora/zora.cpp \
 	D:/Qt/Qtproject/Zora/zora.h \
 	D:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake \
@@ -355,5 +377,11 @@ Zora_autogen/timestamp: \
 	D:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/vadefs.h \
 	D:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/wchar.h \
 	D:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/wctype.h \
+	D:/Qt/Qtproject/Zora/account.ui \
+	D:/Qt/Qtproject/Zora/life.ui \
+	D:/Qt/Qtproject/Zora/music.ui \
+	D:/Qt/Qtproject/Zora/password.ui \
+	D:/Qt/Qtproject/Zora/schoolclass.ui \
+	D:/Qt/Qtproject/Zora/work.ui \
 	D:/Qt/Qtproject/Zora/zora.ui \
 	D:/Qt/Tools/CMake_64/bin/cmake.exe

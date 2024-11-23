@@ -73,7 +73,11 @@ D:/Qt/Qtproject/Zora/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/Zora_autogen/EWI
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qvarlengtharray.h \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qvector.h \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qversiontagging.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtGui/QBitmap \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/QMouseEvent \
+  D:/Qt/5.15.2/mingw81_64/include/QtGui/QPainter \
+  D:/Qt/5.15.2/mingw81_64/include/QtGui/QWheelEvent \
+  D:/Qt/5.15.2/mingw81_64/include/QtGui/qbitmap.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qbrush.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qcolor.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qcursor.h \
@@ -86,13 +90,16 @@ D:/Qt/Qtproject/Zora/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/Zora_autogen/EWI
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qkeysequence.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qmatrix.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qpaintdevice.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtGui/qpainter.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qpalette.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtGui/qpen.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qpixelformat.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qpixmap.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qpolygon.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qregion.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qrgb.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qrgba64.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtGui/qtextoption.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qtgui-config.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qtguiglobal.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qtouchdevice.h \
@@ -100,12 +107,15 @@ D:/Qt/Qtproject/Zora/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/Zora_autogen/EWI
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qvector2d.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qwindowdefs.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qwindowdefs_win.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtWidgets/QButtonGroup \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/QCalendarWidget \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/QLabel \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/QMainWindow \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/QPushButton \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/QSystemTrayIcon \
+  D:/Qt/5.15.2/mingw81_64/include/QtWidgets/QWidget \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qabstractbutton.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qbuttongroup.h \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qcalendarwidget.h \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qframe.h \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qlabel.h \
@@ -117,6 +127,12 @@ D:/Qt/Qtproject/Zora/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/Zora_autogen/EWI
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qtwidgets-config.h \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qtwidgetsglobal.h \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qwidget.h \
+  D:/Qt/Qtproject/Zora/account.h \
+  D:/Qt/Qtproject/Zora/life.h \
+  D:/Qt/Qtproject/Zora/music.h \
+  D:/Qt/Qtproject/Zora/password.h \
+  D:/Qt/Qtproject/Zora/schoolclass.h \
+  D:/Qt/Qtproject/Zora/work.h \
   D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed/limits.h \
   D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed/syslimits.h \
   D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/algorithm \
