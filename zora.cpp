@@ -296,9 +296,9 @@ void Zora::accountbtn_push(){
     if(account_window->isHidden()){//如果窗口隐藏
         QWidget *account_window = new QWidget(this);  // 指定父对象
         account_window->setWindowFlags(Qt::Window);  // 设置为顶级窗口
-
-
-        account_window->move(0,0);
+        account_window->setWindowTitle("记账"); // 设置窗口标题
+        account_window->setFixedSize(700,500);//设置窗口固定大小
+        account_window->move(700,500);//窗口移动
 
         account_window->show();
         music_window->hide();

@@ -5,7 +5,9 @@ account::account(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::account)
 {
-    ui->setupUi(this);  
+    ui->setupUi(this);
+
+
 }
 
 account::~account()
