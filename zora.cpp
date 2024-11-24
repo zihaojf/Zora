@@ -294,7 +294,12 @@ void Zora::musicbtn_push(){//音乐按钮
 
 void Zora::accountbtn_push(){
     if(account_window->isHidden()){//如果窗口隐藏
+        QWidget *account_window = new QWidget(this);  // 指定父对象
+        account_window->setWindowFlags(Qt::Window);  // 设置为顶级窗口
+
+
         account_window->move(0,0);
+
         account_window->show();
         music_window->hide();
         class_window->hide();
@@ -307,7 +312,6 @@ void Zora::accountbtn_push(){
         account_window->hide();//窗口可见就关闭
 
     buttonswitch=0;
-    setbutton_invisiable();
 
 }
 

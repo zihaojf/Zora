@@ -6,6 +6,7 @@ D:/Qt/Qtproject/Zora/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/Zora_autogen/EWI
   D:/Qt/5.15.2/mingw81_64/include/QtCore/QRandomGenerator \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/QTimer \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/QtGlobal \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qabstractitemmodel.h \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qalgorithms.h \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qarraydata.h \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qatomic.h \
@@ -14,6 +15,7 @@ D:/Qt/Qtproject/Zora/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/Zora_autogen/EWI
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qbasictimer.h \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qbytearray.h \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qbytearraylist.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qcalendar.h \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qchar.h \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qcompilerdetection.h \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qconfig.h \
@@ -31,9 +33,11 @@ D:/Qt/Qtproject/Zora/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/Zora_autogen/EWI
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qhash.h \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qhashfunctions.h \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qiodevice.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qitemselectionmodel.h \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qiterator.h \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qline.h \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qlist.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qlocale.h \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qlogging.h \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qmap.h \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qmargins.h \
@@ -51,6 +55,7 @@ D:/Qt/Qtproject/Zora/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/Zora_autogen/EWI
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qrect.h \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qrefcount.h \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qregexp.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qregularexpression.h \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qscopedpointer.h \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qset.h \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qshareddata.h \
@@ -99,30 +104,56 @@ D:/Qt/Qtproject/Zora/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/Zora_autogen/EWI
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qregion.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qrgb.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qrgba64.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtGui/qtextcursor.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtGui/qtextformat.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qtextoption.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qtgui-config.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qtguiglobal.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qtouchdevice.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qtransform.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtGui/qvalidator.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qvector2d.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qwindowdefs.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qwindowdefs_win.h \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/QButtonGroup \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/QCalendarWidget \
+  D:/Qt/5.15.2/mingw81_64/include/QtWidgets/QDateEdit \
+  D:/Qt/5.15.2/mingw81_64/include/QtWidgets/QHBoxLayout \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/QLabel \
+  D:/Qt/5.15.2/mingw81_64/include/QtWidgets/QLineEdit \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/QMainWindow \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/QPushButton \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/QSystemTrayIcon \
+  D:/Qt/5.15.2/mingw81_64/include/QtWidgets/QTableWidget \
+  D:/Qt/5.15.2/mingw81_64/include/QtWidgets/QVBoxLayout \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/QWidget \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qabstractbutton.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qabstractitemdelegate.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qabstractitemview.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qabstractscrollarea.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qabstractslider.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qabstractspinbox.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qboxlayout.h \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qbuttongroup.h \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qcalendarwidget.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qdatetimeedit.h \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qframe.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qgridlayout.h \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qlabel.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qlayout.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qlayoutitem.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qlineedit.h \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qmainwindow.h \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qpushbutton.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qrubberband.h \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qsizepolicy.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qslider.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qstyle.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qstyleoption.h \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qsystemtrayicon.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qtabbar.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qtableview.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qtablewidget.h \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qtabwidget.h \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qtwidgets-config.h \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qtwidgetsglobal.h \

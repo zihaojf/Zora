@@ -6,13 +6,98 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>800</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <widget class="QLineEdit" name="account_lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>5</x>
+     <y>0</y>
+     <width>190</width>
+     <height>50</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="account_inquireButton">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>0</y>
+     <width>120</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>查询</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="account_deleteButton">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>0</y>
+     <width>120</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>删除</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="account_quitButton">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>0</y>
+     <width>120</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="account_changeButton">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>0</y>
+     <width>120</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>修改</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="account_addButton">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>0</y>
+     <width>120</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>增加</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="account_tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>50</y>
+     <width>800</width>
+     <height>550</height>
+    </rect>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

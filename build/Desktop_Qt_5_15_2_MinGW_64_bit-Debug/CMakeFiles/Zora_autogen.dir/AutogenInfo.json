@@ -148,7 +148,7 @@
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
-	"PARALLEL" : 16,
+	"PARALLEL" : 8,
 	"PARSE_CACHE_FILE" : "D:/Qt/Qtproject/Zora/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/CMakeFiles/Zora_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "D:/Qt/5.15.2/mingw81_64/bin/moc.exe",
 	"QT_UIC_EXECUTABLE" : "D:/Qt/5.15.2/mingw81_64/bin/uic.exe",
