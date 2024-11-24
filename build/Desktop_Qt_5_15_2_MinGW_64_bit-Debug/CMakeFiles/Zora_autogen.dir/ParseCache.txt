@@ -1648,6 +1648,8 @@ D:/Qt/Qtproject/Zora/work.h
  mdp:D:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:D:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/wchar.h
  mdp:D:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/wctype.h
+D:/Qt/Qtproject/Zora/account.cpp
+ uic:ui_account.h
 D:/Qt/Qtproject/Zora/zora.h
  mmc:Q_OBJECT
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/QDataStream
@@ -1990,8 +1992,6 @@ D:/Qt/Qtproject/Zora/zora.h
  mdp:D:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:D:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/wchar.h
  mdp:D:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/wctype.h
-D:/Qt/Qtproject/Zora/account.cpp
- uic:ui_account.h
 D:/Qt/Qtproject/Zora/life.cpp
  uic:ui_life.h
 D:/Qt/Qtproject/Zora/main.cpp

@@ -9,6 +9,7 @@
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 
+
 namespace Ui {
 class account;
 }
@@ -20,6 +21,7 @@ class account : public QWidget
 public:
     explicit account(QWidget *parent = nullptr);
     ~account();
+
 
 
 private:
