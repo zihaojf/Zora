@@ -38,6 +38,23 @@ Zora::~Zora()
 {
     delete ui;
     delete timer;
+    delete bodyImage;
+    delete closebtn;
+    delete musicbtn;
+    delete accountbtn;
+    delete lifebtn;
+    delete passwordbtn;
+    delete classbtn;
+    delete workbtn;
+    delete minbtn;
+
+    delete account_window;
+    delete music_window;
+    delete password_window;
+    delete life_window;
+    delete work_window;
+    delete class_window;
+    delete psystemtray;
 
 }
 
@@ -271,6 +288,26 @@ void Zora::closebtn_push(){//关闭按钮
     password_window->close();
     life_window->close();
     this->close();
+
+    delete ui;
+    delete timer;
+    delete bodyImage;
+    delete closebtn;
+    delete musicbtn;
+    delete accountbtn;
+    delete lifebtn;
+    delete passwordbtn;
+    delete classbtn;
+    delete workbtn;
+    delete minbtn;
+
+    delete account_window;
+    delete music_window;
+    delete password_window;
+    delete life_window;
+    delete work_window;
+    delete class_window;
+    delete psystemtray;
 }
 
 void Zora::musicbtn_push(){//音乐按钮
