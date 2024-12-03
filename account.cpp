@@ -9,7 +9,10 @@ account::account(QWidget *parent)
     , ui(new Ui::account)
 {
     ui->setupUi(this);
-    creat_database();
+    initbutton();
+    inittable();
+    creat_database_connection();
+
 
 }
 
@@ -18,39 +21,64 @@ account::~account()
     delete ui;
 }
 
-void account::creat_database(){
-    // 创建 SQLite 数据库连接
-    QSqlDatabase account_database;
-    //检查是否已有数据库，否则重新添加一个数据库
-    if (QSqlDatabase::contains("qt_sql_default_connection"))
-    {
-        account_database = QSqlDatabase::database("qt_sql_default_connection");
-    }
-    else
-    {
-        account_database = QSqlDatabase::addDatabase("QSQLITE");
-        account_database.setDatabaseName("account.db");
+void account::initbutton(){
+    searchbtn = new QPushButton(this);
+    searchline_edit = new QLineEdit(this);
+    addbtn = new QPushButton(this);
+    yearbtn = new QPushButton(this);
+    monthbtn = new QPushButton(this);
+    removebtn = new QPushButton(this);
+
+
+    searchbtn->setText(tr("搜索"));
+    addbtn->setText(tr("添加"));
+    yearbtn->setText(tr("年总览"));
+    monthbtn->setText("月总览");
+    removebtn->setText("显示所有");
+
+    searchline_edit->setGeometry(10,0,line_editwidth,line_editheight);
+    searchbtn->setGeometry(line_editwidth*1.1,0,buttonwidth,buttonheight);
+    addbtn->setGeometry((line_editwidth+buttonwidth)*1.2,0,buttonwidth,buttonheight);
+    yearbtn->setGeometry((line_editwidth+2*buttonwidth)*1.2,0,buttonwidth,buttonheight);
+    monthbtn->setGeometry((line_editwidth+3*buttonwidth)*1.2,0,buttonwidth,buttonheight);
+    removebtn->setGeometry((line_editwidth+4*buttonwidth)*1.3,0,buttonwidth*1.5,buttonheight);
+
+
+
+}
+
+bool account::creat_database_connection(){
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("account.db");
+    if(!db.open()){
+        qDebug() << "链接账单数据库失败";
+        return false;
     }
 
-    //打开数据库
-    if (!account_database.open())
-    {
-        qDebug() << "无法打开数据库！" << account_database.lastError();
+    QSqlQuery query;
+    bool ret = query.exec("CREATE TABLE IF NOT EXISTS account"
+                          "(id INTEGER,"
+                          "money INTEGER,"
+                          "notes NVARCHAR,"
+                          "date DATATIME)");
+    if(!ret){
+        qDebug() << "创建账单数据表失败"<<query.lastError().text();
     }
-    else
-    {
-        QSqlQuery sql_query(account_database);
-        QString create_sql = "create table account (id int primary key,money int, text varchar(30), day DATE)";
-        sql_query.prepare(create_sql);
-        if(!sql_query.exec())
-        {
-            qDebug() << "错误: 无法创建数据库." << sql_query.lastError();
-        }
-        else
-        {
-            qDebug() << "成功创建数据库!";
-        }
-    }
+
+    return true;
+}
+
+void account::inittable(){
+    account_table = new QTableWidget(this);
+    account_table->setRowCount(100);
+    account_table->setColumnCount(5);
+
+    QStringList horizontalHeader;
+    horizontalHeader << "编号" << "金额" << "备注"<<"金额";
+    account_table->setHorizontalHeaderLabels(horizontalHeader);
+    account_table->setGeometry(0,buttonheight*1.2,900,540);
+    account_table->setEditTriggers(QAbstractItemView::NoEditTriggers);
+
 
 }
 

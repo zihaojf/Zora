@@ -28,8 +28,9 @@ class account : public QWidget
 public:
     explicit account(QWidget *parent = nullptr);
     ~account();
-    void creat_database();
-
+    bool creat_database_connection();//设置数据库链接
+    void initbutton();
+    void inittable();
 
 
 
@@ -41,6 +42,18 @@ private:
 
     QSqlDatabase account_db;
     QSqlQuery sql_query;
+    QSqlDatabase account_database;
+    QPushButton *searchbtn;
+    QPushButton *addbtn;
+    QPushButton *yearbtn;//年总览
+    QPushButton *monthbtn;//月总览
+    QPushButton *removebtn;//清除搜索条件按钮
+    QLineEdit *searchline_edit;//搜索文本框
+
+    QTableWidget *account_table;
+
+    int buttonwidth = 80,buttonheight = 50;
+    int line_editwidth = 200,line_editheight = 50;
 
 
 
