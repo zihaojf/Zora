@@ -7,6 +7,7 @@
 #include<QWheelEvent>
 #include<QPushButton>
 #include<QButtonGroup>
+#include <QMediaPlayer>
 
 namespace Ui {
 class music;

@@ -16,7 +16,6 @@ life::life(QWidget *parent)
     setMask(bmp);
     setWindowOpacity(0.95);//设置透明度
     setStyleSheet("background-color:white;");
-
     Qt::WindowFlags m_flags = windowFlags();//保持窗口置顶1
     setWindowFlags(m_flags|Qt::WindowStaysOnTopHint);//保持窗口置顶2
 }

@@ -9,8 +9,15 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+set(Qt5_DIR "D:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5")
+set(Qt5MultimediaWidgets_DIR **/Qt5.9.8/5.9.8/clang_64/lib/cmake/Qt5MultimediaWidgets)#包的位置
+
+
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
+find_package(Qt5 COMPONENTS Widgets Core Sql REQUIRED)
+find_package(Qt5 COMPONENTS Multimedia REQUIRED)
+
 
 set(PROJECT_SOURCES
         main.cpp
@@ -57,7 +64,9 @@ else()
     endif()
 endif()
 
-target_link_libraries(Zora PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(Zora Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(Zora Qt5::Widgets Qt5::Sql)
+target_link_libraries(${PROJECT_NAME} Qt5::Multimedia)#链接到库
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an
@@ -83,3 +92,15 @@ install(TARGETS Zora
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(Zora)
 endif()
+
+
+
+
+
+
+
+
+
+
+
+

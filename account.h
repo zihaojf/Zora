@@ -28,29 +28,19 @@ class account : public QWidget
 public:
     explicit account(QWidget *parent = nullptr);
     ~account();
-    QTableWidget *account_tableWidget;
-    QSqlDatabase account_db;
-    QSqlQuery sql_query;
-    int temp_account_id;
-    QString temp_account_money;
-    QString temp_account_text;
-    QDate temp_account_day;
-
-
-
-
-    void setaccount_tableWidget();
-    void renewaccount_database();
+    void creat_database();
 
 
 
 
 
-private slots:
-    void on_account_addButton_clicked();
+
 
 private:
     Ui::account *ui;
+
+    QSqlDatabase account_db;
+    QSqlQuery sql_query;
 
 
 
