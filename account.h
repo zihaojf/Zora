@@ -15,6 +15,10 @@
 #include <QtSql/QSqlError>
 #include <QtSql/QSqlQuery>
 #include <QDebug>
+#include "account_addpage.h"
+#include "account_monthchart.h"
+#include "account_yearchart.h"
+
 
 
 namespace Ui {
@@ -30,18 +34,26 @@ public:
     ~account();
     bool creat_database_connection();//设置数据库链接
     void initbutton();
+    void initpage();
     void inittable();
+    void show_all_accountdata();
+    void show_addpage();
+    void show_yearpage();
+    void show_monthpage();
+    void insert_accountdata(double money,QString method,QString description,QDateTime datetime);
 
-
-
+private slots:
+    void receive_addpage(double money,QString method,QString description,QDateTime datetime);
 
 
 
 private:
     Ui::account *ui;
-
+    account_addpage *addpage;
+    account_monthchart *monthpage;
+    account_yearchart *yearpage;
     QSqlDatabase account_db;
-    QSqlQuery sql_query;
+    const int columncount=5;//数据库列数
     QSqlDatabase account_database;
     QPushButton *searchbtn;
     QPushButton *addbtn;
@@ -54,8 +66,6 @@ private:
 
     int buttonwidth = 80,buttonheight = 50;
     int line_editwidth = 200,line_editheight = 50;
-
-
 
 };
 
