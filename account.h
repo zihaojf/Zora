@@ -18,6 +18,8 @@
 #include "account_addpage.h"
 #include "account_monthchart.h"
 #include "account_yearchart.h"
+#include <QMenu>
+#include <QInputDialog>
 
 
 
@@ -41,10 +43,12 @@ public:
     void show_yearpage();
     void show_monthpage();
     void insert_accountdata(double money,QString method,QString description,QDateTime datetime);
+    void searchbtn_push();
+    void delete_accountdata();
 
 private slots:
     void receive_addpage(double money,QString method,QString description,QDateTime datetime);
-
+    void showContextMenu(const QPoint &pos);
 
 
 private:

@@ -209,5 +209,14 @@
         <file>image/mainbutton_icon/password.png</file>
         <file>image/mainbutton_icon/work.png</file>
         <file>image/icon/systemtray_icon.png</file>
+        <file>image/music/file.png</file>
+        <file>image/music/nextsong.png</file>
+        <file>image/music/pause.png</file>
+        <file>image/music/playback.png</file>
+        <file>image/music/presong.png</file>
+        <file>image/music/randplay.png</file>
+        <file>image/music/seqplay.png</file>
+        <file>image/music/volume_enable.png</file>
+        <file>image/music/volumn_disabled.png</file>
     </qresource>
 </RCC>

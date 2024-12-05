@@ -10,13 +10,13 @@ account::account(QWidget *parent)
     , ui(new Ui::account)
 {
     ui->setupUi(this);
-    parent->setAttribute(Qt::WA_QuitOnClose,false);
-    initbutton();
-    initpage();
-    inittable();
-    creat_database_connection();
-    show_all_accountdata();
-    connect(addpage,&account_addpage::senddata,this,&account::receive_addpage);
+    parent->setAttribute(Qt::WA_QuitOnClose,false);//设定父窗口不关闭
+    initbutton();//初始化按钮
+    initpage();//初始化页面
+    inittable();//初始化表格
+    creat_database_connection();//连接数据库
+    show_all_accountdata();//默认显示所有账单数据
+    connect(addpage,&account_addpage::senddata,this,&account::receive_addpage);//增加按钮槽
 
 
 }
@@ -52,6 +52,7 @@ void account::initbutton(){
     connect(addbtn,&QPushButton::clicked,this,&account::show_addpage);
     connect(yearbtn,&QPushButton::clicked,this,&account::show_yearpage);
     connect(monthbtn,&QPushButton::clicked,this,&account::show_monthpage);
+    connect(searchbtn,&QPushButton::clicked,this,&account::searchbtn_push);
 
 }
 
@@ -80,7 +81,8 @@ bool account::creat_database_connection(){
 void account::inittable(){
     account_table = new QTableWidget(this);
     account_table->setColumnCount(columncount);
-
+    account_table->setContextMenuPolicy(Qt::CustomContextMenu);//设置自定义右键菜单
+    connect(account_table, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(showContextMenu(QPoint)));//右键槽函数
     QStringList horizontalHeader;
     horizontalHeader << "交易编号" << "金额" << "支付方式"<<"描述"<<"支付时间";
     account_table->setHorizontalHeaderLabels(horizontalHeader);
@@ -131,7 +133,7 @@ void account::insert_accountdata(double money,QString method,QString description
         id[query.value("id").toInt()]++;
     }
     query.prepare("INSERT INTO account (id,account,method,description,date) VALUES (:id,:money,:method,:description,:date)");
-    for(int i = 0;i<=999;i++){
+    for(int i = 1;i<=999;i++){
         if(!id[i]){
             query.bindValue(":id",i);
             break;
@@ -151,6 +153,44 @@ void account::insert_accountdata(double money,QString method,QString description
 
     show_all_accountdata();
 }
+
+void account::searchbtn_push(){
+    QString text = searchline_edit->text();
+    if(text.trimmed().isEmpty()){
+        QMessageBox::warning(this,"警告","请输入查询数据！");
+    }
+    else{
+        show_all_accountdata();
+        QSqlQuery query;
+        query.prepare("SELECT * FROM account WHERE"
+                      " (id LIKE :idvalue OR account LIKE :value OR method LIKE :value OR description LIKE :value)");
+        query.bindValue(":idvalue", text.toInt());
+        qDebug()<<text.toInt();
+        query.bindValue(":value", "%" + text + "%");
+
+        if(!query.exec()){
+            qDebug()<<"查询失败";
+            QMessageBox::warning(this,"警告","未查询到数据！");
+        }
+        else{
+            account_table->setRowCount(0);//先删除原有所有行
+            int rowcount = 0;
+            while(query.next()){
+                account_table->insertRow(rowcount);
+                for(int i = 0;i<columncount;i++){
+                    QTableWidgetItem *item = new QTableWidgetItem(query.value(i).toString());
+                    account_table->setItem(rowcount,i,item);
+                }
+                ++rowcount;
+            }
+            account_table->resizeColumnToContents(0);//设置id列最小宽度
+            account_table->resizeColumnToContents(4);//设置id列最小宽度
+            account_table->show();
+            searchline_edit->clear();
+        }
+    }
+}
+
 
 
 void account::show_addpage(){
@@ -174,7 +214,35 @@ void account::show_monthpage(){
 
 }
 
+void account::showContextMenu(const QPoint &pos) {
+    QMenu menu;
+    QAction *deleteaction = menu.addAction("删除账单");
+    connect(deleteaction,&QAction::triggered,this,&account::delete_accountdata);
+    menu.exec(account_table->mapToGlobal(pos));
 
+}
+
+void account::delete_accountdata(){
+    int id = QInputDialog::getInt(this,"删除账单","请输入您要删除账单的编号：");
+    QSqlQuery query;
+    if(!query.exec("SELECT * FROM account")){//查询所有列
+        qDebug()<<"查找数据库失败！";
+        return;
+    }
+    query.prepare("DELETE FROM account WHERE id=:value");
+    query.bindValue(":value",id);
+    if(!query.exec()){
+        qDebug()<<"删除失败";
+        QMessageBox::warning(this,"警告","删除失败！");
+    }
+    else{
+        qDebug()<<"删除成功!";
+        QMessageBox::warning(this,"祝贺","删除成功！");
+    }
+
+    show_all_accountdata();
+
+}
 
 
 

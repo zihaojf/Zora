@@ -312,7 +312,10 @@ void Zora::closebtn_push(){//关闭按钮
 
 void Zora::musicbtn_push(){//音乐按钮
     if(music_window->isHidden()){//如果窗口隐藏
-        music_window->move(0,0);
+        music_window->move(600,400);
+        music_window->setWindowFlags(Qt::Window);
+        music_window->setWindowTitle("音乐播放");
+        music_window->setFixedSize(1200,800);
         music_window->show();
         account_window->hide();
         class_window->hide();

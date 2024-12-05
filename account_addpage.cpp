@@ -41,11 +41,13 @@ void account_addpage::on_pushButton_clicked()
         else{
             QMessageBox::warning(this,"恭喜！","添加成功!");
             emit senddata(account,method,description,datetime);
+            ui->moneylineEdit->clear();
+            ui->methodlineEdit->clear();
+            ui->dateTimeEdit->clear();
+            ui->descriptionlineEdit->clear();
             this->close();
         }
-
     }
-
 }
 
 
