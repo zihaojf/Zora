@@ -65,7 +65,6 @@ private:
     QPushButton *monthbtn;//月总览
     QPushButton *removebtn;//清除搜索条件按钮
     QLineEdit *searchline_edit;//搜索文本框
-
     QTableWidget *account_table;
 
     int buttonwidth = 80,buttonheight = 50;

@@ -211,8 +211,8 @@
         <file>image/icon/systemtray_icon.png</file>
         <file>image/music/file.png</file>
         <file>image/music/nextsong.png</file>
+        <file>image/music/play.png</file>
         <file>image/music/pause.png</file>
-        <file>image/music/playback.png</file>
         <file>image/music/presong.png</file>
         <file>image/music/randplay.png</file>
         <file>image/music/seqplay.png</file>
