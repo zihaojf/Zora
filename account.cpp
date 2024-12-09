@@ -14,10 +14,11 @@ account::account(QWidget *parent)
     initbutton();//初始化按钮
     initpage();//初始化页面
     inittable();//初始化表格
+
     creat_database_connection();//连接数据库
     show_all_accountdata();//默认显示所有账单数据
     connect(addpage,&account_addpage::senddata,this,&account::receive_addpage);//增加按钮槽
-
+    setstylesheet();
 
 }
 
@@ -242,6 +243,83 @@ void account::delete_accountdata(){
 
     show_all_accountdata();
 
+}
+
+void account::setstylesheet() {
+    this->setStyleSheet(R"(
+        /* 设置窗口背景色 */
+        account {
+            background-color: #f0f0f0; /* 淡灰色背景 */
+        }
+
+        /* 设置按钮样式 */
+        QPushButton {
+            background-color: ##FFD822; /* 黄色背景 */
+            border: 1px solid #ccc; /* 边框 */
+            border-radius: 5px; /* 圆角 */
+            padding: 5px 10px; /* 内边距 */
+            font-size: 14px; /* 字体大小 */
+        }
+
+        QPushButton:hover {
+            background-color: #eec900; /* 悬停时颜色加深 */
+        }
+
+        QPushButton:pressed {
+            background-color: #d4a000; /* 按下时颜色更深 */
+        }
+
+        /* 设置LineEdit样式 */
+        QLineEdit {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 3px 5px;
+            font-size: 14px;
+        }
+
+        QLineEdit:focus {
+            border: 1px solid #ffd700; /* 聚焦时边框颜色 */
+        }
+
+        /* 设置表格样式 */
+        QTableWidget {
+            border: none;
+            background-color: #ffffff; /* 表格背景色 */
+            alternate-background-color: #f9f9f9; /* 交替行背景色 */
+        }
+
+        QTableWidget::item:selected {
+            background-color: #c7e8f2; /* 选中项背景色 */
+        }
+
+        QHeaderView::section {
+            background-color: #e7e7e7; /* 表头背景色 */
+            padding: 4px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        /* 设置菜单样式 */
+        QMenu {
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+        }
+
+        QMenu::item {
+            padding: 5px 20px;
+            border: 1px solid transparent; /* 默认无边框 */
+        }
+
+        QMenu::item:selected {
+            color: #ffd700;
+            background-color: #c7e8f2;
+        }
+
+        /* 设置输入对话框样式 */
+        QInputDialog {
+            background-color: #f0f0f0;
+        }
+    )");
 }
 
 

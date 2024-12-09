@@ -161,9 +161,82 @@ void music::show_current_musicname(){
     ui->currentmusic_name->appendPlainText((filelist.at(playlist->currentIndex()).section(QRegExp("[/.]"),-2,-2)));
 }
 
-void music::setstylesheet(){
-    setStyleSheet("background-color: white;");
-    //使用css样式表设置外观样式！！！
+void music::setstylesheet() {
+    this->setStyleSheet(R"(
+        /* 整个窗口的背景色和字体颜色 */
+        QWidget {
+            background-color: #f5f5f5; /* 淡灰色背景 */
+            color: #333; /* 文字颜色 */
+            font-family: 'Segoe UI', 'Arial', sans-serif; /* 字体 */
+        }
 
+        /* 按钮样式 */
+        QPushButton {
+            background-color: transparent; /* 透明背景 */
+            border: 2px solid #ffd700; /* 黄色边框 */
+            border-radius: 10px; /* 圆角 */
+            padding: 10px; /* 内边距 */
+            color: #333; /* 文字颜色 */
+            font-size: 16px; /* 字体大小 */
+        }
+        QPushButton:hover {
+            background-color: #fff5cc; /* 鼠标悬停时背景色 */
+        }
+        QPushButton:pressed {
+            background-color: #ffe066; /* 鼠标按下时背景色 */
+        }
+
+        /* 图标按钮特别样式 */
+        QPushButton[iconOnly="true"] {
+            background-color: transparent; /* 图标按钮透明背景 */
+            border: none; /* 无边框 */
+            padding: 5px; /* 内边距 */
+        }
+        QPushButton[iconOnly="true"]:hover {
+            background-color: #fff5cc; /* 鼠标悬停时背景色 */
+        }
+        QPushButton[iconOnly="true"]:pressed {
+            background-color: #ffe066; /* 鼠标按下时背景色 */
+        }
+
+        /* 列表控件样式 */
+        QListWidget {
+            background-color: #ffffff; /* 白色背景 */
+            border: 1px solid #e0e0e0; /* 灰色边框 */
+            color: #333; /* 文字颜色 */
+            font-size: 14px; /* 字体大小 */
+            border-radius: 5px; /* 圆角 */
+        }
+        QListWidget::item {
+            padding: 10px; /* 列表项内边距 */
+        }
+        QListWidget::item:selected {
+            background-color: #f5f5f5; /* 选中项背景色 */
+        }
+
+        /* 文本框样式 */
+        QPlainTextEdit {
+            background-color: #ffffff; /* 白色背景 */
+            border: 1px solid #e0e0e0; /* 灰色边框 */
+            color: #333; /* 文字颜色 */
+            font-size: 14px; /* 字体大小 */
+            border-radius: 5px; /* 圆角 */
+        }
+
+        /* 标签样式 */
+        QLabel {
+            color: #333; /* 文字颜色 */
+            font-size: 14px; /* 字体大小 */
+        }
+    )");
+
+    // 为图标按钮设置属性以匹配样式
+    playbtn->setProperty("iconOnly", true);
+    pausebtn->setProperty("iconOnly", true);
+    nextsongbtn->setProperty("iconOnly", true);
+    presongbtn->setProperty("iconOnly", true);
+    fileselectbtn->setProperty("iconOnly", true);
+    playmodebtn->setProperty("iconOnly", true);
 }
+
 

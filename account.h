@@ -45,6 +45,7 @@ public:
     void insert_accountdata(double money,QString method,QString description,QDateTime datetime);
     void searchbtn_push();
     void delete_accountdata();
+    void setstylesheet();
 
 private slots:
     void receive_addpage(double money,QString method,QString description,QDateTime datetime);

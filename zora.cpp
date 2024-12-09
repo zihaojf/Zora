@@ -50,7 +50,7 @@ Zora::~Zora()
 
     delete account_window;
     delete music_window;
-    delete password_window;
+    delete passwordlogin_window;
     delete life_window;
     delete work_window;
     delete class_window;
@@ -213,14 +213,14 @@ void Zora::initbutton(){
     account_window = new account(this);
     class_window = new schoolclass(this);
     work_window = new work(this);
-    password_window = new password(this);
+    passwordlogin_window = new passwordlogin(this);
     life_window = new life(this);
 
     music_window->hide();
     account_window->hide();
     class_window->hide();
     work_window->hide();
-    password_window->hide();
+    passwordlogin_window->hide();
     life_window->hide();
 
     //槽和信号，点击按钮打开对应的窗口
@@ -229,7 +229,7 @@ void Zora::initbutton(){
     connect(accountbtn,&QPushButton::clicked,this,&Zora::accountbtn_push);
     connect(classbtn,&QPushButton::clicked,this,&Zora::classbtn_push);
     connect(workbtn,&QPushButton::clicked,this,&Zora::workbtn_push);
-    connect(passwordbtn,&QPushButton::clicked,this,&Zora::passwordbtn_push);
+    connect(passwordbtn,&QPushButton::clicked,this,&Zora::passwordloginbtn_push);
     connect(lifebtn,&QPushButton::clicked,this,&Zora::lifebtn_push);
     connect(minbtn,&QPushButton::clicked,this,&Zora::minbtn_push);
 
@@ -275,8 +275,6 @@ void Zora::setbutton_invisiable(){//设置按钮是否可见
     minbtn->setVisible(buttonswitch);
 
     //移动窗口坐标↓
-
-
 }
 
 
@@ -285,7 +283,7 @@ void Zora::closebtn_push(){//关闭按钮
     music_window->close();
     class_window->close();
     work_window->close();
-    password_window->close();
+    passwordlogin_window->close();
     life_window->close();
     this->close();
 
@@ -303,7 +301,7 @@ void Zora::closebtn_push(){//关闭按钮
 
     delete account_window;
     delete music_window;
-    delete password_window;
+    delete passwordlogin_window;
     delete life_window;
     delete work_window;
     delete class_window;
@@ -320,7 +318,7 @@ void Zora::musicbtn_push(){//音乐按钮
         account_window->hide();
         class_window->hide();
         work_window->hide();
-        password_window->hide();
+        passwordlogin_window->hide();
         life_window->hide();
 
     }
@@ -343,7 +341,7 @@ void Zora::accountbtn_push(){
         music_window->hide();
         class_window->hide();
         work_window->hide();
-        password_window->hide();
+        passwordlogin_window->hide();
         life_window->hide();
 
     }
@@ -361,7 +359,7 @@ void Zora::classbtn_push(){
         account_window->hide();
         music_window->hide();
         work_window->hide();
-        password_window->hide();
+        passwordlogin_window->hide();
         life_window->hide();
 
     }
@@ -380,7 +378,7 @@ void Zora::workbtn_push(){
         account_window->hide();
         class_window->hide();
         music_window->hide();
-        password_window->hide();
+        passwordlogin_window->hide();
         life_window->hide();
 
     }
@@ -392,10 +390,13 @@ void Zora::workbtn_push(){
 
 }
 
-void Zora::passwordbtn_push(){
-    if(password_window->isHidden()){//如果窗口隐藏
-        password_window->move(0,0);
-        password_window->show();
+void Zora::passwordloginbtn_push(){
+    if(passwordlogin_window->isHidden()){//如果窗口隐藏
+        passwordlogin_window->move(900,500);
+        passwordlogin_window->setWindowFlags(Qt::Window);
+        passwordlogin_window->setWindowTitle("密码管理器登录");
+        passwordlogin_window->setFixedSize(600,400);
+        passwordlogin_window->show();
         account_window->hide();
         class_window->hide();
         work_window->hide();
@@ -404,7 +405,7 @@ void Zora::passwordbtn_push(){
 
     }
     else
-        password_window->hide();//窗口可见就关闭
+        passwordlogin_window->hide();//窗口可见就关闭
 
     buttonswitch=0;
     setbutton_invisiable();
@@ -418,7 +419,7 @@ void Zora::lifebtn_push(){
         account_window->hide();
         class_window->hide();
         work_window->hide();
-        password_window->hide();
+        passwordlogin_window->hide();
         music_window->hide();
 
     }
@@ -436,7 +437,7 @@ void Zora::minbtn_push(){
     account_window->hide();
     class_window->hide();
     work_window->hide();
-    password_window->hide();
+    passwordlogin_window->hide();
     music_window->hide();
     life_window->hide();
 

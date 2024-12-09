@@ -54,6 +54,9 @@ else()
             account_addpage.h account_addpage.cpp account_addpage.ui
             account_yearchart.h account_yearchart.cpp account_yearchart.ui
             account_monthchart.h account_monthchart.cpp account_monthchart.ui
+            passwordlogin.h passwordlogin.cpp passwordlogin.ui
+            passwordaddpage.h passwordaddpage.cpp passwordaddpage.ui
+
 
 
 

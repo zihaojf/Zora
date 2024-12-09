@@ -21,7 +21,7 @@
 #include"schoolclass.h"
 #include"work.h"
 #include"life.h"
-#include"password.h"
+#include"passwordlogin.h"
 
 using namespace std;
 
@@ -64,7 +64,7 @@ private:
     schoolclass *class_window;
     work *work_window;
     life *life_window;
-    password *password_window;
+    passwordlogin *passwordlogin_window;
 
     QSystemTrayIcon* psystemtray;//任务栏最小化托盘
 
@@ -103,7 +103,7 @@ public:
     void accountbtn_push();
     void classbtn_push();
     void workbtn_push();
-    void passwordbtn_push();
+    void passwordloginbtn_push();
     void lifebtn_push();
     void minbtn_push();
 
