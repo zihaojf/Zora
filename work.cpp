@@ -7,7 +7,7 @@ work::work(QWidget *parent)
 {
     ui->setupUi(this);
     setWindowFlags(Qt::FramelessWindowHint|Qt::Tool);//去掉窗口的标题栏
-    setStyleSheet("background: rgba(255, 255, 255, 95%);");
+    setStyleSheet("background: rgba(255, 255, 255, 93%);");
     init();
 
 }
@@ -102,6 +102,7 @@ void work::updatetime(){
         if(relaxtime==0){
             timer->stop();
             timelabel->setText("时间到！");
+            workrelaxcondition = 0;
         }
         else{
             int m = relaxtime/60;
@@ -137,6 +138,7 @@ void work::removebtn_push(){
     timer->stop();
     worktime = worktimeconst;
     relaxtime = relaxtimeconst;
+    workrelaxcondition = 0;
     int m = worktime/60;
     int s = worktime%60;
     statelabel->setText(QString("番茄时钟READY"));
@@ -150,7 +152,6 @@ void work::pausebtn_push(){
     statelabel->setText(QString("暂停中"));
     pausebtn->hide();
     startbtn->show();
-
 }
 
 void work::settingbtn_push(){
