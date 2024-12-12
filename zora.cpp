@@ -286,7 +286,7 @@ void Zora::closebtn_push(){//关闭按钮
     passwordlogin_window->close();
     life_window->close();
     this->close();
-
+    QApplication::exit(0);
     delete ui;
     delete timer;
     delete bodyImage;
@@ -306,6 +306,7 @@ void Zora::closebtn_push(){//关闭按钮
     delete work_window;
     delete class_window;
     delete psystemtray;
+
 }
 
 void Zora::musicbtn_push(){//音乐按钮
@@ -373,7 +374,9 @@ void Zora::classbtn_push(){
 
 void Zora::workbtn_push(){
     if(work_window->isHidden()){//如果窗口隐藏
-        work_window->move(0,0);
+        work_window->move(1200,400);
+        //work_window->setWindowFlags(Qt::Window);
+        work_window->setFixedSize(500,300);
         work_window->show();
         account_window->hide();
         class_window->hide();
@@ -415,7 +418,10 @@ void Zora::passwordloginbtn_push(){
 void Zora::lifebtn_push(){
     if(life_window->isHidden()){//如果窗口隐藏
         life_window->move(0,0);
+        life_window->setWindowFlags(Qt::Window);
+        life_window->setFixedSize(400,200);
         life_window->show();
+
         account_window->hide();
         class_window->hide();
         work_window->hide();

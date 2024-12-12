@@ -57,6 +57,8 @@ else()
             passwordlogin.h passwordlogin.cpp passwordlogin.ui
             passwordaddpage.h passwordaddpage.cpp passwordaddpage.ui
             passwordsettings.h passwordsettings.cpp passwordsettings.ui
+            worksetting.h worksetting.cpp worksetting.ui
+
 
 
 
