@@ -6,7 +6,6 @@ passwordlogin::passwordlogin(QWidget *parent)
     , ui(new Ui::passwordlogin)
 {
     ui->setupUi(this);
-    loadconfig();
     init();
 }
 
@@ -15,13 +14,10 @@ passwordlogin::~passwordlogin()
     delete ui;
 }
 
-void passwordlogin::loadconfig(){
-    QSettings cfg("pwconfig.ini", QSettings::IniFormat);
-    password = cfg.value("password").toString();
-}
-
 void passwordlogin::loginbtn_push(){
     QString lineEditstring = ui->lineEdit->text();
+    QSettings cfg("pwconfig.ini", QSettings::IniFormat);
+    password = cfg.value("password").toString();
     if(lineEditstring==password){
         password_window->move(800,600);
         password_window->setWindowFlag(Qt::Window);

@@ -11,7 +11,9 @@ password::password(QWidget *parent)
     creat_database_connection();
     initbutton();
     inittable();
+    initpage();
     show_alltable();
+    connect(passwordaddpage_window,&passwordaddpage::senddata,this,&password::receive_data);//增加按钮槽
 
 }
 
@@ -61,7 +63,10 @@ void password::inittable(){
 }
 
 void password::initpage(){
-
+    passwordaddpage_window = new passwordaddpage(this);
+    passwordaddpage_window->hide();
+    pwdsetting_window = new passwordsettings(this);
+    pwdsetting_window->hide();
 }
 
 void password::searchbtn_push(){
@@ -103,7 +108,11 @@ void password::searchbtn_push(){
 }
 
 void password::addbtn_push(){
-
+        qDebug()<<"设定窗口";
+        passwordaddpage_window->setWindowFlag(Qt::Window);
+        passwordaddpage_window->setWindowTitle("添加密码");
+        passwordaddpage_window->setFixedSize(500,400);
+        passwordaddpage_window->show();
 }
 
 void password::setbtn_push(){
@@ -136,11 +145,96 @@ void password::show_alltable(){
 void password::showContextMenu(const QPoint &pos) {
     QMenu menu;
     QAction *deleteaction = menu.addAction("删除密码");
-    connect(deleteaction,&QAction::triggered,this,&password::delete_password);
+    connect(deleteaction, &QAction::triggered, this, [this, pos]() {
+        delete_password(pos);
+    });
     menu.exec(ui->pwtable->mapToGlobal(pos));
 
 }
 
-void password::delete_password(){
+void password::delete_password(const QPoint &pos){
+    QModelIndex index = ui->pwtable->indexAt(pos);
+    if(index.isValid()){
+        int col = index.column();
+        int row = index.row();
+        qDebug()<<row<<" "<<col;
+
+        QTableWidgetItem *number = ui->pwtable->item(row,0);
+        if(number){
+            int id = number->text().toInt();
+
+            QSqlQuery query;
+            if(!query.exec("SELECT * FROM password")){//查询所有列
+                qDebug()<<"查找数据库失败！";
+                return;
+            }
+            query.prepare("DELETE FROM password WHERE id=:value");
+            query.bindValue(":value",id);
+            if(!query.exec()){
+                qDebug()<<"删除失败";
+                QMessageBox::warning(this,"警告","删除失败！");
+            }
+            else{
+                qDebug()<<"删除成功!";
+                QMessageBox::warning(this,"祝贺","删除成功！");
+            }
+
+            show_alltable();
+        }
+
+
+    }
 
 }
+
+void password::receive_data(QString webappname,QString username,QString password,QString description){
+    insertdata(webappname,username,password,description);
+}
+
+void password::insertdata(QString webappname,QString username,QString password,QString description){
+    QSqlQuery query;
+    if(!query.exec("SELECT * FROM password")){//查询所有列
+        qDebug()<<"添加失败";
+        return;
+    }
+    int id[1000]={0};
+    while(query.next()){
+        id[query.value("id").toInt()]++;
+    }
+    query.prepare("INSERT INTO password (id,webappname,username,password,description) VALUES (:id,:webappname,:username,:password,:description)");
+    for(int i = 1;i<=999;i++){
+        if(!id[i]){
+            query.bindValue(":id",i);
+            break;
+        }
+    }
+    query.bindValue(":webappname",webappname);
+    query.bindValue(":username",username);
+    query.bindValue(":password",password);
+    query.bindValue(":description",description);
+
+    qDebug()<<"insert"<<id<<" "<<webappname<<" "<<username<<" "<<password<<description;
+    if (!query.exec()) {
+        qDebug() << "插入数据错误 " << query.lastError().text();
+    } else {
+        qDebug() << "插入数据成功!";
+    }
+
+    show_alltable();
+}
+
+void password::on_setbtn_clicked()
+{
+    qDebug()<<"打开设置窗口";
+    pwdsetting_window->setWindowFlag(Qt::Window);
+    pwdsetting_window->setWindowTitle("添加密码");
+    pwdsetting_window->setFixedSize(650,480);
+    pwdsetting_window->show();
+}
+
+
+void password::on_pushButton_clicked()
+{
+    show_alltable();
+}
+

@@ -19,11 +19,6 @@ public:
     explicit account_addpage(QWidget *parent = nullptr);
     ~account_addpage();
 
-    double getmoney();
-    QString getmethod();
-    QString getdiscription();
-    QDateTime getdatetime();
-
 
 signals:
     void senddata(double money,QString method,QString description,QDateTime datetime);
