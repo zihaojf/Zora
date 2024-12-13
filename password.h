@@ -44,9 +44,7 @@ public:
 private slots:
     void showContextMenu(const QPoint &pos);
     void receive_data(QString webappname,QString username,QString password,QString description);
-
     void on_setbtn_clicked();
-
     void on_pushButton_clicked();
 
 private:

@@ -216,6 +216,8 @@ void Zora::initbutton(){
     passwordlogin_window = new passwordlogin(this);
     life_window = new life(this);
 
+    life_window->setStyleSheet("background-color:#F1F1F1;");
+
     music_window->hide();
     account_window->hide();
     class_window->hide();
@@ -417,11 +419,10 @@ void Zora::passwordloginbtn_push(){
 
 void Zora::lifebtn_push(){
     if(life_window->isHidden()){//如果窗口隐藏
-        life_window->move(0,0);
-        life_window->setWindowFlags(Qt::Window);
-        life_window->setFixedSize(400,200);
+        life_window->move(700,350);
+        //life_window->setWindowFlags(Qt::Window);
+        life_window->setFixedSize(1200,800);
         life_window->show();
-
         account_window->hide();
         class_window->hide();
         work_window->hide();

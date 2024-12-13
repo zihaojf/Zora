@@ -13,19 +13,6 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>160</x>
-     <y>130</y>
-     <width>67</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>life</string>
-   </property>
-  </widget>
  </widget>
  <resources/>
  <connections/>

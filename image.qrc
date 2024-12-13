@@ -223,5 +223,13 @@
         <file>image/work/remove.svg</file>
         <file>image/work/settings.svg</file>
         <file>image/work/pause.svg</file>
+        <file>image/lifeandlist/addbtn.svg</file>
+        <file>image/lifeandlist/closebtn.svg</file>
+        <file>image/lifeandlist/listbtn.svg</file>
+        <file>image/lifeandlist/notebtn.svg</file>
+        <file>image/lifeandlist/settingbtn.svg</file>
+        <file>image/lifeandlist/listbtn_yellow.svg</file>
+        <file>image/lifeandlist/notebtn_yellow.svg</file>
+        <file>image/lifeandlist/settingbtn_yellow.svg</file>
     </qresource>
 </RCC>
