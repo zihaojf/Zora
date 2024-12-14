@@ -33,6 +33,7 @@ protected:
         QWidget::mouseReleaseEvent(event);  // 调用基类的实现
     }
 
+
 private:
     Ui::CardWidget *ui;
     QLabel *titlelabel;

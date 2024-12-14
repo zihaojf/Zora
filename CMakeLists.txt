@@ -59,6 +59,7 @@ else()
             passwordsettings.h passwordsettings.cpp passwordsettings.ui
             worksetting.h worksetting.cpp worksetting.ui
             cardwidget.h cardwidget.cpp
+            listwidget.h listwidget.cpp
 
 
 

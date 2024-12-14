@@ -17,7 +17,9 @@ life::life(QWidget *parent)
     initnotedetailpage();
     initsettingpage();
     initcardwidget();
+    initlistwidget();
     initnoteaddpage();
+    initlistaddpage();
 
 }
 
@@ -145,6 +147,59 @@ void life::initlistpage(){
     liststatelabel->setFont(font);
     liststatelabel->move(70,30);
     liststatelabel->hide();
+
+    //滚动页面
+    //堆叠页面
+    QSqlQuery query;
+    QString sql = QString("SELECT * FROM list ORDER BY state ASC, updatedtime DESC");
+    int rowCount = 0;
+    if (query.exec(sql)) {
+        if (query.next()) {
+            rowCount = query.value(0).toInt();
+            qDebug() << "list中的行数为:" << rowCount;
+        }
+        else rowCount=1;
+    } else {
+        qDebug() << "查询失败:" ;
+    }
+    listpageminheight = (rowCount/3+1)*250+50;
+    listpage->setMinimumHeight(1000);//暂时修改
+
+    listscrollArea = new QScrollArea(this);
+    listscrollArea->setGeometry(50, 200, 1150, 600);
+    listscrollArea->setWidgetResizable(true);
+    listscrollArea->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    listscrollArea->setStyleSheet("QScrollArea { border: none; }");
+    listpage->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    listscrollArea->setWidget(listpage);
+    stackedwidget->addWidget(listscrollArea);
+
+
+
+
+}
+
+void life::initlistwidget(){
+    for(auto listwidget : listwidgets){
+        delete listwidget;
+    }
+    listwidgets.clear();
+    QSqlQuery query;
+    if(!query.exec("SELECT * FROM list ORDER BY state ASC, updatedtime DESC")){//查询所有列
+        qDebug()<<"查询失败";
+        return;
+    }
+
+    int rowcount = 0;
+    while(query.next()){
+        int id = query.value(0).toInt();
+        QString title = query.value("title").toString();
+        int state = query.value(2).toInt();
+        QString updatedtime = query.value("updatedtime").toString();
+        qDebug()<<id<<" "<<title<<" "<<state<<" "<<updatedtime;
+        creatlistwidget(id,title,state,updatedtime,rowcount);
+        ++rowcount;
+    }
 }
 
 void life::initsettingpage(){
@@ -185,7 +240,7 @@ void life::notebtn_push(){
 }
 
 void life::listbtn_push(){
-    stackedwidget->setCurrentIndex(1);
+    stackedwidget->setCurrentWidget(listscrollArea);
     notebtn->setIcon(QIcon(":/image/lifeandlist/notebtn.svg"));
     listbtn->setIcon(QIcon(":/image/lifeandlist/listbtn_yellow.svg"));
     settingbtn->setIcon(QIcon(":/image/lifeandlist/settingbtn.svg"));
@@ -252,8 +307,8 @@ bool life::creat_listdatabase_connection(){
                           "(id INTEGER,"
                           "title NVARCHAR,"
                           "state INTEGER,"
-                          "createdtime NVARCHAR,"
-                          "updatedtime NVARCHAR)");
+                          "createdtime DATATIME,"
+                          "updatedtime DATATIME)");
     if(!ret){
         qDebug() << "创建待办数据表失败";
     }
@@ -300,8 +355,20 @@ void life::creatnotecardwidget(int id,QString title,QString content,QString upda
     connect(cardwidget,&CardWidget::clicked,notepage,[this](int id){
         notecard_push(id);
     });
+}
 
+void life::creatlistwidget(int id,QString title,int state,QString updatedtime,int rowcount){
+    listwidget *list = new listwidget(listpage);
+    listwidgets.append(list);
+    list->setid(id);
+    list->setlabelunchecked();
+    if(state==1) list->setlabelchecked();
+    list->settitle(title);
+    list->move(30,70*rowcount);
+    list->show();
 
+    connect(list,&listwidget::getcheckboxstatement,this,&life::changecheckboxstate);
+    connect(list,&listwidget::getdeleteaction,this,&life::receivelistdeleteaction);
 
 }
 
@@ -346,33 +413,7 @@ void life::notedetail(int widgetid){
 }
 
 
-void life::updatenotecard(){
 
-    stackedwidget->setCurrentWidget(notescrollArea);
-    noteaddbtn->show();
-    qDebug()<<"更新笔记数据";
-    for(auto cardwidget : notecardwidgets){
-        delete cardwidget;
-    }
-    notecardwidgets.clear();
-    qDebug()<<"删除成功";
-    QSqlQuery query;
-    if(!query.exec("SELECT * FROM note ORDER BY updatedtime DESC")){//查询所有列
-        qDebug()<<"查询失败";
-        return;
-    }
-
-    int rowcount = 0;
-    while(query.next()){
-        int id = query.value(0).toInt();
-        QString title = query.value("title").toString();
-        QString content = query.value("content").toString();
-        QString updatedtime = query.value("updatedtime").toString();
-        qDebug()<<id<<" "<<title<<" "<<content<<" "<<updatedtime;
-        creatnotecardwidget(id,title,content,updatedtime,rowcount);
-        ++rowcount;
-    }
-}
 
 void life::initnotedetailpage(){
     QPushButton *notesavebtn = new QPushButton(notedetailpage);
@@ -562,5 +603,150 @@ void life::noteaddpage_savebtn_push(){
     }
 }
 
+
+void life::initlistaddpage(){
+    listaddpage_lineEdit = new QLineEdit(listaddpage);
+    listaddpage_comfirmbtn = new QPushButton(listaddpage);
+    //输入框
+    listaddpage_lineEdit->move(100,200);
+    listaddpage_lineEdit->setFixedWidth(900);
+    listaddpage_lineEdit->setMinimumHeight(100);
+    listaddpage_lineEdit->setStyleSheet("background-color:#F9F9FB;border:none;border-radius:25px;font-size:30px;color:#F6B128;");
+    listaddpage_lineEdit->setText("请输入待办事项");
+    //确认按钮
+    listaddpage_comfirmbtn->setIcon(QIcon(":/image/lifeandlist/confirmbtn.svg"));
+    listaddpage_comfirmbtn->setIconSize(QSize(80,80));
+    listaddpage_comfirmbtn->move(500,400);
+    listaddpage_comfirmbtn->setStyleSheet("QPushButton { border: none; background: transparent; }"
+                                       "QPushButton:hover { background-color: #f0f0f0; }");
+    //信号与槽
+    connect(listaddpage_comfirmbtn,&QPushButton::clicked,this,&life::listaddpage_comfirmbtn_push);
+
+
+
+}
+
+void life::listaddpage_comfirmbtn_push(){
+    QSqlQuery query;
+    if(!query.exec("SELECT * FROM list")){//查询所有列
+        qDebug()<<"添加失败";
+        return;
+    }
+    int id[1000]={0};
+    while(query.next()){
+        id[query.value(0).toInt()]++;
+    }
+
+    query.prepare("INSERT INTO list (id,title,state,createdtime,updatedtime) VALUES (:id,:title,:state,:createdtime,:updatedtime)");
+    for(int i = 1;i<=999;i++){
+        if(!id[i]){
+            query.bindValue(":id",i);
+            break;
+        }
+    }
+
+    query.bindValue(":title",listaddpage_lineEdit->text());
+    query.bindValue(":state",0);
+    query.bindValue(":createdtime",QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss"));
+    query.bindValue(":updatedtime",QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss"));
+    if (!query.exec()) {
+        qDebug() << "插入数据错误 ";
+    } else {
+        QMessageBox::warning(this,"祝贺","新建待办成功！");
+        qDebug() << "插入数据成功!";
+        listaddpage_lineEdit->setText("请输入待办");
+        updatelistwidget();
+    }
+}
+
+void life::updatenotecard(){
+
+    stackedwidget->setCurrentWidget(notescrollArea);
+    noteaddbtn->show();
+    qDebug()<<"更新笔记数据";
+    for(auto cardwidget : notecardwidgets){
+        delete cardwidget;
+    }
+    notecardwidgets.clear();
+    qDebug()<<"删除成功";
+    QSqlQuery query;
+    if(!query.exec("SELECT * FROM note ORDER BY updatedtime DESC")){//查询所有列
+        qDebug()<<"查询失败";
+        return;
+    }
+
+    int rowcount = 0;
+    while(query.next()){
+        int id = query.value(0).toInt();
+        QString title = query.value("title").toString();
+        QString content = query.value("content").toString();
+        QString updatedtime = query.value("updatedtime").toString();
+        qDebug()<<id<<" "<<title<<" "<<content<<" "<<updatedtime;
+        creatnotecardwidget(id,title,content,updatedtime,rowcount);
+        ++rowcount;
+    }
+}
+
+void life::updatelistwidget(){
+    stackedwidget->setCurrentWidget(listscrollArea);
+    listaddbtn->show();
+
+    for(auto listwidget : listwidgets){
+        listwidget->deleteLater();
+    }
+
+    listwidgets.clear();
+    QSqlQuery query;
+    if(!query.exec("SELECT * FROM list ORDER BY state ASC, updatedtime DESC")){//查询所有列
+        qDebug()<<"查询失败";
+        return;
+    }
+
+    int rowcount = 0;
+    while(query.next()){
+        int id = query.value(0).toInt();
+        QString title = query.value("title").toString();
+        int state = query.value(2).toInt();
+        QString updatedtime = query.value("updatedtime").toString();
+        qDebug()<<id<<" "<<title<<" "<<state<<" "<<updatedtime;
+        creatlistwidget(id,title,state,updatedtime,rowcount);
+        ++rowcount;
+    }
+}
+
+void life::changecheckboxstate(int state,int id){
+    QSqlQuery query;
+    QString sql = "UPDATE list SET state = :state WHERE id == :id";
+    query.prepare(sql);
+    query.bindValue(":state",state);
+    query.bindValue(":id",id);
+    qDebug()<<id;
+    if(!query.exec()){
+        qDebug()<<"未查找到";
+    }
+    else{
+        qDebug()<<"状态修改成功";
+    }
+    updatelistwidget();
+}
+
+void life::receivelistdeleteaction(int id){
+    deletelist(id);
+}
+
+void life::deletelist(int id){
+    QSqlQuery query;
+    QString sql = "DELETE FROM list WHERE id=:id";
+    query.prepare(sql);
+    query.bindValue(":id",id);
+    qDebug()<<id;
+    if(!query.exec()){
+        qDebug()<<"未查找到";
+    }
+    else{
+        qDebug()<<"删除成功";
+    }
+    updatelistwidget();
+}
 
 

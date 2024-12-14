@@ -16,6 +16,7 @@
 #include <QSqlQuery>
 #include <QLineEdit>
 #include "cardwidget.h"
+#include "listwidget.h"
 #include <QScrollArea>
 #include <qdebug.h>
 #include <QDateTime>
@@ -39,6 +40,7 @@ public:
     void initsettingpage();
     void initnotedetailpage();
     void initnoteaddpage();
+    void initlistaddpage();
     void mouseMoveEvent(QMouseEvent *event);
     void closebtn_push();
     void notebtn_push();
@@ -47,14 +49,20 @@ public:
     void noteaddbtn_push();
     void listaddbtn_push();
     void initcardwidget();
+    void initlistwidget();
     void creatnotecardwidget(int id,QString title,QString content,QString updatedtime,int rowcount);
+    void creatlistwidget(int id,QString title,int state,QString updatedtime,int rowcount);
     void notecard_push(int id);
     void notedetail(int id);
     void updatenotecard();
+    void updatelistwidget();
     void notesavebtn_push();
     void notedeletebtn_push();
     void noteaddpage_savebtn_push();
-
+    void listaddpage_comfirmbtn_push();
+    void changecheckboxstate(int state,int id);
+    void receivelistdeleteaction(int id);
+    void deletelist(int id);
 
     //数据库
     bool creat_notedatabase_connection();
@@ -91,13 +99,17 @@ private:
 
     int notecolumncount = 5;
     QList<CardWidget *> notecardwidgets;
+    QList<listwidget *> listwidgets;
     QScrollArea *notescrollArea;
     QScrollArea *listscrollArea;
     int notepageminheight;
+    int listpageminheight;
     QLabel *notestatelabel;
     QLabel *liststatelabel;
     QLabel *settingstatelabel;
     QLabel *notedetail_id_label;
+    QLineEdit *listaddpage_lineEdit;
+    QPushButton *listaddpage_comfirmbtn;
 
 };
 
