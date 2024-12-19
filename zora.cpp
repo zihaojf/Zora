@@ -357,7 +357,8 @@ void Zora::accountbtn_push(){
 
 void Zora::classbtn_push(){
     if(class_window->isHidden()){//如果窗口隐藏
-        class_window->move(0,0);
+        class_window->move(400,20);
+        class_window->setFixedSize(1600,1200);
         class_window->show();
         account_window->hide();
         music_window->hide();
@@ -377,7 +378,6 @@ void Zora::classbtn_push(){
 void Zora::workbtn_push(){
     if(work_window->isHidden()){//如果窗口隐藏
         work_window->move(1200,400);
-        //work_window->setWindowFlags(Qt::Window);
         work_window->setFixedSize(500,300);
         work_window->show();
         account_window->hide();
@@ -420,7 +420,6 @@ void Zora::passwordloginbtn_push(){
 void Zora::lifebtn_push(){
     if(life_window->isHidden()){//如果窗口隐藏
         life_window->move(700,350);
-        //life_window->setWindowFlags(Qt::Window);
         life_window->setFixedSize(1200,800);
         life_window->show();
         account_window->hide();

@@ -18,6 +18,7 @@
 #include <QListWidget>
 #include <QString>
 #include <QPlainTextEdit>
+#include <QSettings>
 
 
 namespace Ui {

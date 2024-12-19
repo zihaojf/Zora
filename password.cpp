@@ -14,7 +14,6 @@ password::password(QWidget *parent)
     initpage();
     show_alltable();
     connect(passwordaddpage_window,&passwordaddpage::senddata,this,&password::receive_data);//增加按钮槽
-
 }
 
 password::~password()
@@ -24,14 +23,14 @@ password::~password()
 
 bool password::creat_database_connection()
 {
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("password.db");
-    if(!db.open()){
+    dbpassword = QSqlDatabase::addDatabase("QSQLITE","passwordconnection");
+    dbpassword.setDatabaseName("password.db");
+    if(!dbpassword.open()){
         qDebug() << "链接密码记录数据库失败";
         return false;
     }
 
-    QSqlQuery query;
+    QSqlQuery query(dbpassword);
     bool ret = query.exec("CREATE TABLE IF NOT EXISTS password"
                           "(id INTEGER,"
                           "webappname NVARCHAR,"
@@ -39,8 +38,9 @@ bool password::creat_database_connection()
                           "password NVARCHAR,"
                           "description NVARCHAR)");
     if(!ret){
-        qDebug() << "创建账单数据表失败"<<query.lastError().text();
+        qDebug() << "数据表失败"<<query.lastError().text();
     }
+    else qDebug()<<"密码数据库连接成功";
 
     return true;
 }
@@ -76,16 +76,19 @@ void password::searchbtn_push(){
     }
     else{
         show_alltable();
-        QSqlQuery query;
+        QSqlQuery query(dbpassword);
         query.prepare("SELECT * FROM password WHERE"
-                      " (id LIKE :idvalue OR webappname LIKE :value OR username LIKE :value OR password LIKE :value OR description LIKE :value)");
+                      " (id LIKE :idvalue OR webappname LIKE :webappname OR username LIKE :username OR password LIKE :password OR description LIKE :description)");
         query.bindValue(":idvalue", text.toInt());
-        qDebug()<<text.toInt();
-        query.bindValue(":value", "%" + text + "%");
+        query.bindValue(":webappname", "%" + text + "%");
+        query.bindValue(":username", "%" + text + "%");
+        query.bindValue(":password", "%" + text + "%");
+        query.bindValue(":description", "%" + text + "%");
 
         if(!query.exec()){
-            qDebug()<<"查询失败";
+            qDebug()<<"查询失败"<<query.lastError();
             QMessageBox::warning(this,"警告","未查询到数据！");
+            ui->searchedit->clear();
         }
         else{
             qDebug()<<"查询成功！";
@@ -120,9 +123,9 @@ void password::setbtn_push(){
 }
 
 void password::show_alltable(){
-    QSqlQuery query;
+    QSqlQuery query(dbpassword);
     if(!query.exec("SELECT * FROM password")){//查询所有列
-        qDebug()<<"查询失败";
+        qDebug()<<"查询失败"<<query.lastError();
         return;
     }
     ui->pwtable->setRowCount(0);//先删除原有所有行
@@ -192,9 +195,9 @@ void password::receive_data(QString webappname,QString username,QString password
 }
 
 void password::insertdata(QString webappname,QString username,QString password,QString description){
-    QSqlQuery query;
+    QSqlQuery query(dbpassword);
     if(!query.exec("SELECT * FROM password")){//查询所有列
-        qDebug()<<"添加失败";
+        qDebug()<<"添加失败"<<query.lastError();
         return;
     }
     int id[1000]={0};

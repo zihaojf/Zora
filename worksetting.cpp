@@ -6,6 +6,12 @@ worksetting::worksetting(QWidget *parent)
     , ui(new Ui::worksetting)
 {
     ui->setupUi(this);
+    ui->label->setStyleSheet("background: transparent;");
+    ui->label_2->setStyleSheet("background: transparent;");
+    ui->label_3->setStyleSheet("background: transparent;");
+    ui->label_4->setStyleSheet("background: transparent;");
+    ui->label_5->setStyleSheet("background: transparent;");
+    ui->label_6->setStyleSheet("background: transparent;");
 }
 
 worksetting::~worksetting()

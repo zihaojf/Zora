@@ -52,6 +52,7 @@ private:
     const int columncount = 5;//表格列数
     passwordaddpage *passwordaddpage_window;
     passwordsettings *pwdsetting_window;
+    QSqlDatabase dbpassword;
 };
 
 #endif // PASSWORD_H

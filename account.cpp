@@ -35,6 +35,9 @@ void account::initbutton(){
     monthbtn = new QPushButton(this);
     removebtn = new QPushButton(this);
 
+    //暂时不支持年、月总览功能
+    yearbtn->hide();
+    monthbtn->hide();
 
     searchbtn->setText(tr("搜索"));
     addbtn->setText(tr("添加"));
@@ -58,14 +61,14 @@ void account::initbutton(){
 }
 
 bool account::creat_database_connection(){
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("account.db");
-    if(!db.open()){
+    accountdb = QSqlDatabase::addDatabase("QSQLITE","accountconnection");
+    accountdb.setDatabaseName("account.db");
+    if(!accountdb.open()){
         qDebug() << "链接账单数据库失败";
         return false;
     }
 
-    QSqlQuery query;
+    QSqlQuery query(accountdb);
     bool ret = query.exec("CREATE TABLE IF NOT EXISTS account"
                           "(id INTEGER,"
                           "account INTEGER,"
@@ -102,7 +105,7 @@ void account::initpage(){
 }
 
 void account::show_all_accountdata(){
-    QSqlQuery query;
+    QSqlQuery query(accountdb);
     if(!query.exec("SELECT * FROM account")){//查询所有列
         qDebug()<<"查询失败";
         return;
@@ -124,7 +127,7 @@ void account::show_all_accountdata(){
 }
 
 void account::insert_accountdata(double money,QString method,QString description,QDateTime datetime){
-    QSqlQuery query;
+    QSqlQuery query(accountdb);
     if(!query.exec("SELECT * FROM account")){//查询所有列
         qDebug()<<"添加失败";
         return;
@@ -162,7 +165,7 @@ void account::searchbtn_push(){
     }
     else{
         show_all_accountdata();
-        QSqlQuery query;
+        QSqlQuery query(accountdb);
         query.prepare("SELECT * FROM account WHERE"
                       " (id LIKE :idvalue OR account LIKE :value OR method LIKE :value OR description LIKE :value)");
         query.bindValue(":idvalue", text.toInt());
@@ -225,7 +228,7 @@ void account::showContextMenu(const QPoint &pos) {
 
 void account::delete_accountdata(){
     int id = QInputDialog::getInt(this,"删除账单","请输入您要删除账单的编号：");
-    QSqlQuery query;
+    QSqlQuery query(accountdb);
     if(!query.exec("SELECT * FROM account")){//查询所有列
         qDebug()<<"查找数据库失败！";
         return;

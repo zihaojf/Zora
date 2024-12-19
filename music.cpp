@@ -55,6 +55,12 @@ void music::init(){//初始化
     player->setPlaylist(playlist);
     playbtn->hide();
     pausebtn->show();
+
+    //获取默认音乐路径
+    QSettings cfg("musicconfig.ini", QSettings::IniFormat);
+    musicpath = cfg.value("selectedmusicpath").toString();
+    get_musicfile();
+
     //信号与槽
     connect(fileselectbtn,&QPushButton::clicked,this,&music::set_musicfilepath);//设置文件夹路径
     connect(ui->musiclistwidget,&QListWidget::itemDoubleClicked,this,&music::playmusiclistitem);//双击播放
@@ -72,6 +78,8 @@ void music::set_musicfilepath(){
     QString folderpath = QFileDialog::getExistingDirectory(this,"请选择音乐文件的路径:");
     if(!folderpath.isEmpty()){
         musicpath = folderpath;
+        QSettings cfg("musicconfig.ini",QSettings::IniFormat);
+        cfg.setValue("selectedmusicpath",folderpath);
     }
     else{
         QMessageBox::warning(this,"警告","添加失败！");

@@ -235,5 +235,10 @@
         <file>image/lifeandlist/returnbtn.svg</file>
         <file>image/lifeandlist/deletebtn.svg</file>
         <file>image/lifeandlist/confirmbtn.svg</file>
+        <file>image/class/addbtn.svg</file>
+        <file>image/class/closebtn.svg</file>
+        <file>image/class/leftbtn.svg</file>
+        <file>image/class/rightbtn.svg</file>
+        <file>image/class/settingbtn.svg</file>
     </qresource>
 </RCC>

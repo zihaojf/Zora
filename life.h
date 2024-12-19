@@ -42,6 +42,7 @@ public:
     void initnoteaddpage();
     void initlistaddpage();
     void mouseMoveEvent(QMouseEvent *event);
+    void mousePressEvent(QMouseEvent *event);
     void closebtn_push();
     void notebtn_push();
     void listbtn_push();
@@ -110,6 +111,9 @@ private:
     QLabel *notedetail_id_label;
     QLineEdit *listaddpage_lineEdit;
     QPushButton *listaddpage_comfirmbtn;
+
+    QSqlDatabase notelistdb;
+
 
 };
 

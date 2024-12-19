@@ -57,7 +57,7 @@ private:
     account_addpage *addpage;
     account_monthchart *monthpage;
     account_yearchart *yearpage;
-    QSqlDatabase account_db;
+    QSqlDatabase accountdb;
     const int columncount=5;//数据库列数
     QSqlDatabase account_database;
     QPushButton *searchbtn;

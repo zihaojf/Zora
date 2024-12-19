@@ -6,6 +6,7 @@ CardWidget::CardWidget(QWidget *parent):
     titlelabel = new QLabel(this);
     contentlabel = new QLabel(this);
     timelabel = new QLabel(this);
+
     titlelabel->setMaximumSize(QSize(300,40));
     contentlabel->setFixedSize(QSize(300,140));
     contentlabel->setAlignment(Qt::AlignTop | Qt::AlignLeft);

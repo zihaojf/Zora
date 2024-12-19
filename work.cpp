@@ -19,7 +19,13 @@ work::~work()
 
 void work::mouseMoveEvent(QMouseEvent *event){//长按移动
     if(event->buttons() & Qt::LeftButton){//只要按下了左键，按位与
-        this->move(event->globalPos() - MoveTopLeft);
+        this->move(event->globalPos()-topleft);
+    }
+}
+
+void work::mousePressEvent(QMouseEvent *event){
+    if (event->button() == Qt::LeftButton) {
+        topleft = event->globalPos() - this->pos(); // 计算并存储偏移量
     }
 }
 

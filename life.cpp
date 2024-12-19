@@ -108,7 +108,7 @@ void life::initnotepage(){
     notestatelabel->setStyleSheet("color:#F6B128");
     QFont font("微软雅黑",30,QFont::Bold);
     notestatelabel->setFont(font);
-    notestatelabel->move(70,30);
+    notestatelabel->move(70,20);
 
     //堆叠页面
     QSqlQuery query;
@@ -163,7 +163,7 @@ void life::initlistpage(){
         qDebug() << "查询失败:" ;
     }
     listpageminheight = (rowCount/3+1)*250+50;
-    listpage->setMinimumHeight(1000);//暂时修改
+    listpage->setMinimumHeight(listpageminheight);
 
     listscrollArea = new QScrollArea(this);
     listscrollArea->setGeometry(50, 200, 1150, 600);
@@ -206,12 +206,13 @@ void life::initsettingpage(){
     //左上状态
     //页面左上角状态初始化
     settingstatelabel = new QLabel(this);
-    settingstatelabel->setText("设置");
+    settingstatelabel->setText("设置(暂时未添加具体设置功能)");
     settingstatelabel->setStyleSheet("color:#F6B128");
     QFont font("微软雅黑",30,QFont::Bold);
     settingstatelabel->setFont(font);
-    settingstatelabel->move(70,30);
+    settingstatelabel->move(70,20);
     settingstatelabel->hide();
+
 }
 
 
@@ -219,7 +220,13 @@ void life::initsettingpage(){
 
 void life::mouseMoveEvent(QMouseEvent *event){//长按移动
     if(event->buttons() & Qt::LeftButton){//只要按下了左键，按位与
-        this->move(event->globalPos() - topleft);
+        this->move(event->globalPos()-topleft);
+    }
+}
+
+void life::mousePressEvent(QMouseEvent *event){
+    if (event->button() == Qt::LeftButton) {
+        topleft = event->globalPos() - this->pos(); // 计算并存储偏移量
     }
 }
 
@@ -274,14 +281,14 @@ void life::listaddbtn_push(){
 }
 
 bool life::creat_notedatabase_connection(){
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("life.db");
-    if(!db.open()){
-        qDebug() << "链接笔记and待办数据库失败";
+    notelistdb = QSqlDatabase::addDatabase("QSQLITE");
+    notelistdb.setDatabaseName("life.db");
+    if(!notelistdb.open()){
+        qDebug() << "链接笔记数据库失败";
         return false;
     }
 
-    QSqlQuery query;
+    QSqlQuery query(notelistdb);
     bool ret = query.exec("CREATE TABLE IF NOT EXISTS note"
                           "(id INTEGER,"
                           "title NVARCHAR,"
@@ -295,14 +302,9 @@ bool life::creat_notedatabase_connection(){
 }
 
 bool life::creat_listdatabase_connection(){
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("life.db");
-    if(!db.open()){
-        qDebug() << "链接笔记and待办数据库失败";
-        return false;
-    }
 
-    QSqlQuery query;
+
+    QSqlQuery query(notelistdb);
     bool ret = query.exec("CREATE TABLE IF NOT EXISTS list"
                           "(id INTEGER,"
                           "title NVARCHAR,"
@@ -320,7 +322,7 @@ void life::initcardwidget(){
         delete cardwidget;
     }
     notecardwidgets.clear();
-    QSqlQuery query;
+    QSqlQuery query(notelistdb);
     if(!query.exec("SELECT * FROM note ORDER BY updatedtime DESC")){//查询所有列
         qDebug()<<"查询失败";
         return;
@@ -387,7 +389,7 @@ void life::notedetail(int widgetid){
     QString title;
     QString content;
     QString updatedtime;
-    QSqlQuery query;
+    QSqlQuery query(notelistdb);
     if(!query.exec("SELECT * FROM note")){//查询所有列
         qDebug()<<"查询失败";
         return;
@@ -479,7 +481,7 @@ void life::initnotedetailpage(){
 
 void life::notedeletebtn_push(){
     int id = notedetail_id_label->text().toInt();
-    QSqlQuery query;
+    QSqlQuery query(notelistdb);
 
     if(!query.exec("SELECT * FROM note")){//查询所有列
         qDebug()<<"查找数据库失败！";
@@ -504,7 +506,7 @@ void life::notesavebtn_push(){
     QString newcontent = contentedit->toHtml();
     QString currenttime = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss");
 
-    QSqlQuery query;
+    QSqlQuery query(notelistdb);
     QString sql = "UPDATE note SET title = :title,content = :content,updatedtime = :updatedtime WHERE id = :id";
     query.prepare(sql);
     query.bindValue(":id",id);
@@ -570,7 +572,7 @@ void life::initnoteaddpage(){
 }
 
 void life::noteaddpage_savebtn_push(){
-    QSqlQuery query;
+    QSqlQuery query(notelistdb);
     if(!query.exec("SELECT * FROM note")){//查询所有列
         qDebug()<<"添加失败";
         return;
@@ -627,7 +629,7 @@ void life::initlistaddpage(){
 }
 
 void life::listaddpage_comfirmbtn_push(){
-    QSqlQuery query;
+    QSqlQuery query(notelistdb);
     if(!query.exec("SELECT * FROM list")){//查询所有列
         qDebug()<<"添加失败";
         return;
@@ -669,7 +671,7 @@ void life::updatenotecard(){
     }
     notecardwidgets.clear();
     qDebug()<<"删除成功";
-    QSqlQuery query;
+    QSqlQuery query(notelistdb);
     if(!query.exec("SELECT * FROM note ORDER BY updatedtime DESC")){//查询所有列
         qDebug()<<"查询失败";
         return;
@@ -696,7 +698,7 @@ void life::updatelistwidget(){
     }
 
     listwidgets.clear();
-    QSqlQuery query;
+    QSqlQuery query(notelistdb);
     if(!query.exec("SELECT * FROM list ORDER BY state ASC, updatedtime DESC")){//查询所有列
         qDebug()<<"查询失败";
         return;
@@ -715,7 +717,7 @@ void life::updatelistwidget(){
 }
 
 void life::changecheckboxstate(int state,int id){
-    QSqlQuery query;
+    QSqlQuery query(notelistdb);
     QString sql = "UPDATE list SET state = :state WHERE id == :id";
     query.prepare(sql);
     query.bindValue(":state",state);
@@ -735,7 +737,7 @@ void life::receivelistdeleteaction(int id){
 }
 
 void life::deletelist(int id){
-    QSqlQuery query;
+    QSqlQuery query(notelistdb);
     QString sql = "DELETE FROM list WHERE id=:id";
     query.prepare(sql);
     query.bindValue(":id",id);

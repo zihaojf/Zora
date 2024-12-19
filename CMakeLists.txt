@@ -60,6 +60,8 @@ else()
             worksetting.h worksetting.cpp worksetting.ui
             cardwidget.h cardwidget.cpp
             listwidget.h listwidget.cpp
+            coursecard.h coursecard.cpp
+            coursetabelwidget.h coursetabelwidget.cpp
 
 
 
