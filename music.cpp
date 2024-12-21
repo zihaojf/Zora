@@ -9,9 +9,6 @@ music::music(QWidget *parent)
     init();
     setstylesheet();
 
-
-
-
 }
 
 music::~music()
@@ -99,7 +96,7 @@ void music::get_musicfile(){
         filelist<<name;//添加进音乐名称列表
     }
 
-    ui->musiclistwidget->clear();//清除音乐显示列表
+    ui->musiclistwidget->clear();//清除音乐显示列表+
     foreach(QFileInfo file,musicfilelist){
         ui->musiclistwidget->addItem(file.fileName());//添加音乐显示列表
     }

@@ -205,6 +205,15 @@ void Zora::initbutton(){
     lifebtn->setIcon(QIcon(":/image/mainbutton_icon/life.png"));
     minbtn->setIcon(QIcon(":/image/mainbutton_icon/min.png"));
 
+    closebtn->setIconSize(QSize(30,30));
+    musicbtn->setIconSize(QSize(30,30));
+    accountbtn->setIconSize(QSize(30,30));
+    classbtn->setIconSize(QSize(30,30));
+    workbtn->setIconSize(QSize(30,30));
+    passwordbtn->setIconSize(QSize(30,30));
+    lifebtn->setIconSize(QSize(30,30));
+    minbtn->setIconSize(QSize(30,30));
+
     setbutton_size();//设置按钮的大小
     buttonswitch = 0;//默认设置为不显示
     setbutton_invisiable();//设置显示与否

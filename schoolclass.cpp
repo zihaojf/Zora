@@ -1057,8 +1057,6 @@ void schoolclass::removeaddpage(){
     for(auto day : daybtns){
         day->setCheckState(Qt::CheckState::Unchecked);
     }
-
-
 }
 
 void schoolclass::mousePressEvent(QMouseEvent *event){
@@ -1249,7 +1247,6 @@ bool schoolclass::judge_courseconflicts(QVector<int> selectedweek, QVector<int> 
                     day = i-44;
                 }
             }
-
             //检测是否重合
             if(day==selectedday){
                 for(int i = 1;i<=25;i++){

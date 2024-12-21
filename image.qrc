@@ -240,5 +240,7 @@
         <file>image/class/leftbtn.svg</file>
         <file>image/class/rightbtn.svg</file>
         <file>image/class/settingbtn.svg</file>
+        <file>logo.ico</file>
+        <file>logo.rc</file>
     </qresource>
 </RCC>
